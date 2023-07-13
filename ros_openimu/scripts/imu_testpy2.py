@@ -38,34 +38,6 @@ class IMUAccuracyTester:
 
         self.update_orientation(dt)
 
-    def update_linear_position(self):
-        dt = rospy.get_time() - self.previous_time
-        self.linear_velocity.x += self.linear_acceleration.x * dt
-        self.linear_velocity.y += self.linear_acceleration.y * dt
-        self.linear_velocity.z += self.linear_acceleration.z * dt
-
-        self.linear_position.x += self.linear_velocity.x * dt 
-        self.linear_position.y += self.linear_velocity.y * dt 
-        self.linear_position.z += self.linear_velocity.z * dt 
-        # self.previous_time = rospy.get_time()        
-        self.distance_lin_pub.publish(self.linear_position)
-
-    # def update_angular_position(self):
-    #     dt = rospy.get_time() - self.previous_time
-        self.angular_position.x += self.angular_velocity.x * dt 
-        self.angular_position.y += self.angular_velocity.y * dt 
-        self.angular_position.z += self.angular_velocity.z * dt 
-        self.previous_time = rospy.get_time()
-
-        self.distance_ang_pub.publish(self.angular_position)
-
-    
-    def update_position(self, dt):
-        
-        self.position.x += self.linear_acceleration.x * dt**2 / 2.0
-        self.position.y += self.linear_acceleration.y * dt**2 / 2.0
-        self.position.z += self.linear_acceleration.z * dt**2 / 2.0
-        self.position_pub.publish(self.position)
 
     def update_orientation(self, dt):
         self.orientation.x += self.angular_velocity.x * dt
