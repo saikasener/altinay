@@ -36,3 +36,53 @@ https://makersportal.com/blog/calibration-of-an-inertial-measurement-unit-imu-wi
 Info: The aim of a KF is to estimate a state (a vector of time varying quantities) given the data from one or more sensors and the knowledge of a process model/system dynamics ("how" the system is moving). 
 
 https://github.com/xaedes/ROS-Kalman-Filter-for-IMU
+
+
+4 Ağustos 2023 
+--------------------
+Robot Localization Package 
+
+**Path:** launch/moobot_navigation.launch 
+
+### Case - I
+AMCL + Robot Pose EKF Package (eski yöntemimiz)
+**Sonuç** TF Tree: map(/amcl) --> odom_combined(/robot_pose_ekf) --> base_footprint(robot_state_publisher) --> base_link
+* No warning
+
+### Case - II
+Robot Pose EKF Package (without AMCL)
+**Sonuç** TF Tree: Timed out waiting for transform from base_footprint to map
+
+### Case - III
+Robot Localization EKF package for the odom frame
+Robot Localization EKF package for the map frame
+Example Usage: https://kapernikov.com/the-ros-robot_localization-package/
+**Sonuç** TF Tree: Transform from odom to base_footprint was unavailable
+
+### Case - IV
+ros_openimu → imu_complementary_filter (publish /imu_data)
+Robot Localization EKF package for the odom frame
+Robot Localization EKF package for the map frame
+**Sonuç** TF Tree: Transform from odom to base_footprint was unavailable
+**Sonuç** odom --> base_footprint için gelen warning frekans farklılığı sebebiyle geldiği düşünülüyor.
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
