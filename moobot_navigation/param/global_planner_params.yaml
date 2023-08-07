@@ -1,0 +1,9 @@
+GlobalPlanner:
+
+    cost_factor: 0.55
+    neutral_cost: 66
+    lethal_cost: 253
+    use_dijkstra: true
+    visualize_potential: true
+    orientation_mode: 2
+    use_grid_path: false
