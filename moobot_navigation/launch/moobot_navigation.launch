@@ -12,13 +12,16 @@
   <node pkg="map_server" name="map_server" type="map_server" respawn="false" args="$(arg map_file)" output="screen"/>
 
 <!-- Robot Localization from Tutorial --> 
-  <rosparam command="load" file="$(find moobot_navigation)/param/dual_ekf.yaml" />
-  <node pkg="robot_localization" type="ekf_localization_node" name="ekf_se_odom" clear_params="true"/>
+
+  <node pkg="robot_localization" type="ekf_localization_node" name="ekf_se" clear_params="true">
+    <rosparam command="load" file="$(find ros_openimu)/params/ekf.yaml" />
+  </node>
   
+  <!--
   <node pkg="robot_localization" type="ekf_localization_node" name="ekf_se_map" clear_params="true">
     <remap from="odometry/filtered" to="odometry/filtered_map"/>
   </node>
-
+-->
 
 
 <!-- Robot Localization 
@@ -77,12 +80,12 @@
   </node>
        --> 
         
-  <!-- AMCL 
+  <!-- AMCL -->
   <include file="$(find moobot_navigation)/launch/amcl.launch">
       <arg name="scan_topic" default="scan" />
       <arg name="amcl_odom_frame" value="$(arg odom_frame_name)"/>
   </include>
--->
+
 
 
   <!-- move_base -->
