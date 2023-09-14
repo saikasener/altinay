@@ -1,6 +1,6 @@
 # altinay
 
-17 - 21 Temmuz 2023 
+
 --------------------
 Aceinna OpenIMU 300ZI 
 Data Sheet: https://navview.blob.core.windows.net/web-resources/6020-3885-01_G%20OpenIMU300ZI%20Datasheet.pdf?_t=1606313626280
@@ -38,7 +38,7 @@ Info: The aim of a KF is to estimate a state (a vector of time varying quantitie
 https://github.com/xaedes/ROS-Kalman-Filter-for-IMU
 
 
-4 Ağustos 2023 
+
 --------------------
 Robot Localization Package 
 
@@ -71,8 +71,12 @@ Robot Localization EKF package for the map frame
 
 
 
+--------------------
+Coordinates
 
+JSON dosyasına yazılan x,y,z,orientatin datasını çekerek navigasyona hedef vermek
 
+move_base_goal/coordinates.py 
 
 
 
