@@ -1,0 +1,52 @@
+{
+    "Robot1": [
+        {
+            "Name": "Point 1",
+            "X": 1.20658317565918,
+            "Y": 1.0517423127889634,
+            "Z": 0,
+            "Orientation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "task": [
+                "lift_up"
+            ],
+            "target_executed": 1
+        },
+        {
+            "Name": "Point 2",
+            "X": 3.20658317565918,
+            "Y": 1.0517423127889634,
+            "Z": 0,
+            "Orientation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "task": [
+                "lift_down"
+            ],
+            "target_executed": 1
+        },
+        {
+            "Name": "Point 3",
+            "X": 4.11,
+            "Y": 1.0375704996585846,
+            "Z": 0,
+            "Orientation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "task": [
+                "non_stop"
+            ],
+            "target_executed": 1
+        }
+    ]
+}
