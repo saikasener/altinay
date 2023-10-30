@@ -1,0 +1,7 @@
+image: tt_lab.pgm
+resolution: 0.020000
+origin: [-56.009998, -35.009998, 0.000000]
+negate: 0
+occupied_thresh: 0.65
+free_thresh: 0.196
+

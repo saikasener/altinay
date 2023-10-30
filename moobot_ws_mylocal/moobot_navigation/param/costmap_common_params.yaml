@@ -1,0 +1,23 @@
+obstacle_range: 5.0
+raytrace_range: 7.0
+
+# Base Only
+footprint: [[-1,-0.55],[-1,0.55],[1,0.55],[1,-0.55]]
+
+# With Dolly
+#footprint: [[-1,-0.8],[-1,0.8],[1,0.8],[1,-0.8]]
+footprint_padding: 0.0
+
+inflation_radius: 1.0  # Before: 1.0
+cost_scaling_factor: 10.0  # Before: 25.0
+
+map_type: costmap
+observation_sources: scan
+scan: {sensor_frame: base_link, data_type: LaserScan, topic: scan, marking: true, clearing: true}
+
+recovery_behaviors:
+  - name: 'costmap_reset_conservative'
+    type: 'clear_costmap_recovery/ClearCostmapRecovery'
+costmap_reset_conservative:
+  reset_distance: 5.5
+  layer_names: ["obstacle_layer"]

@@ -1,0 +1,2 @@
+float32 angular_vel_z
+float32 linear_acc_x

@@ -1,0 +1,3 @@
+<launch>
+  <node pkg="moobot_plc" type="connect_plc" name="connect_plc" launch-prefix="ethercat_grant" output="screen"/>
+</launch> 																																																																									

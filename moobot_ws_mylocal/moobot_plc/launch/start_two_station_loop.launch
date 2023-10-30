@@ -1,0 +1,3 @@
+<launch>
+  <node pkg="moobot_plc" type="mercedes_2station.py" name="two_station_loop"/>
+</launch>

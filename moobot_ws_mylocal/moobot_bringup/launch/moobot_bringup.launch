@@ -1,0 +1,30 @@
+<launch>
+
+  <node pkg="rosserial_python" type="serial_node.py" name="moobot_core" output="screen">
+    <param name="port" value="/dev/ard_core"/>
+    <param name="baud" value="57600"/>
+    <param name="tf_prefix" value=""/>
+  </node>
+
+  <node pkg="rosserial_python" type="serial_node_led.py" name="moobot_lights" output="screen">
+    <param name="port" value="/dev/ard_lights"/>
+    <param name="baud" value="57600"/>
+    <param name="tf_prefix" value=""/>
+  </node>
+
+  <node pkg="rosserial_python" type="serial_node_bms.py" name="moobot_bms" output="screen">
+    <param name="port" value="/dev/ard_bms"/>
+    <param name="baud" value="57600"/>
+    <param name="tf_prefix" value=""/>
+  </node>
+
+ <!-- Launch PLC Program -->
+  <node pkg="moobot_plc" type="connect_plc" name="connect_plc" launch-prefix="ethercat_grant" output="screen" />
+
+ <!-- Launch Odom Node -->
+  <node pkg="moobot_bringup" type="moobot_odometry" name="moobot_odometry" output="screen" />
+
+ <!-- Launch Nextion -->
+  <node pkg="moobot_bringup" type="nextion.py" name="nextion" />
+
+</launch>

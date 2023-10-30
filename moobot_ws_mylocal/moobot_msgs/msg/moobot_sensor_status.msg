@@ -1,0 +1,2 @@
+string state
+int16 state_type

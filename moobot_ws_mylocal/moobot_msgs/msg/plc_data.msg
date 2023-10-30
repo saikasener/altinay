@@ -1,0 +1,9 @@
+bool home
+bool robot_load
+bool conv_load
+bool conv_unload
+bool out_robot_load
+bool out_conv_load
+bool out_conv_unload
+bool emg_val
+bool transfer_start

@@ -1,0 +1,56 @@
+<launch>
+  <!-- Model Description -->
+  <arg name="model" default="moobot" />
+  <arg name="urdf_model_path" default="$(find moobot_description)/urdf/$(arg model).urdf.xacro" />
+  <param name="robot_description" command="$(find xacro)/xacro --inorder $(arg urdf_model_path)" />
+  <arg name="gui_on" default="false" />
+  <arg name="controller_on" default="false" />
+
+  <!-- Model Spawn Position -->
+  <arg name="x_pos" default="-4.6" />
+  <arg name="y_pos" default="-2.9" />
+  <arg name="z_pos" default="0.0" />
+
+  <!-- World Description -->
+  <arg name="default_world" default="$(find moobot_description)/worlds/moobot_empty_building.world" />
+
+  <!-- Start Gazebo Simulation -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(arg default_world)" />
+    <arg name="paused" value="false" />
+    <arg name="use_sim_time" value="true" />
+    <arg name="gui" value="$(arg gui_on)" />
+    <arg name="headless" value="false" />
+    <arg name="debug" value="false" />
+  </include>
+
+  <!-- Spawn Robot -->
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"
+    args="-urdf -model agv -x $(arg x_pos) -y $(arg y_pos) -z $(arg z_pos) -param robot_description" />
+
+  <!-- Ira Laser Scan Merge -->
+  <include file="$(find moobot_navigation)/launch/ira_laserscan_merge_nano.launch">
+    <arg name="node_start_delay" default="10.0" />
+  </include>
+
+  <!-- Joint and Robot States -->
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"
+    respawn="false" output="screen">
+    <param name="rate" type="double" value="30.0" />
+  </node>
+
+  <!-- Robot State Publisher-->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+    respawn="false" output="screen">
+    <param name="publish_frequency" type="double" value="30.0" />
+  </node>
+
+  <!-- Dashboard -->
+  <!-- <node pkg="moobot_ui" type="dashboard" name="MoobotDashboard" required="false" respawn="false" output="screen" /> -->
+
+  <!-- Kontrol Arayuzu -->
+  <node name="rqt_robot_steering" pkg="rqt_robot_steering" type="rqt_robot_steering"
+    if="$(arg controller_on)">
+    <param name="default_topic" value="/cmd_vel" />
+  </node>
+</launch>

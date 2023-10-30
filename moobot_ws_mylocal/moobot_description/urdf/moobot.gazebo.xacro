@@ -1,0 +1,369 @@
+<?xml version="1.0"?>
+<robot name="moobot"
+	xmlns:xacro="http://ros.org/wiki/xacro">
+	<xacro:arg name="laser_visual" default="false" />
+
+
+	<!-- Scanner Plugins -->
+
+	<gazebo reference="base_link">
+		<material>Gazebo/Red</material>
+	</gazebo>
+
+	<gazebo reference="front_buggy_link">
+		<mu1>0</mu1>
+		<mu2>0</mu2>
+		<fdir1>0 0 0</fdir1>
+		<kp>10000000000000.000000</kp>
+		<kd>100000000000.000000</kd>
+		<minDepth>0</minDepth>
+		<maxVel>-1</maxVel>
+		<material>Gazebo/FlatBlack</material>
+	</gazebo>
+
+	<gazebo reference="top_part_right_link">
+		<mu1 value="0" />
+		<mu2 value="0" />
+		<kp value="10000000.0" />
+		<kd value="1.0" />
+		<fdir1 value="0 0 0" />
+		<minDepth value="0" />
+		<maxVel value="0" />
+		<material value="Gazebo/FlatBlack" />
+	</gazebo>
+
+	<gazebo reference="bottom_part_right_link">
+		<mu1>0</mu1>
+		<mu2>0</mu2>
+		<fdir1>0 0 0</fdir1>
+		<kp>10000000000000.000000</kp>
+		<kd>100000000000.000000</kd>
+		<minDepth>0</minDepth>
+		<maxVel>-1</maxVel>
+		<material>Gazebo/FlatBlack</material>
+	</gazebo>
+
+
+	<gazebo reference="FR_wheel_1_link">
+		<mu1>.01</mu1>
+		<mu2>.01</mu2>
+		<fdir1>0 0 0</fdir1>
+		<kp>10000000000000.000000</kp>
+		<kd>100000000000.000000</kd>
+		<minDepth>0</minDepth>
+		<maxVel>-1</maxVel>
+	</gazebo>
+
+	<gazebo reference="FR_wheel_2_link">
+		<mu1>.01</mu1>
+		<mu2>.01</mu2>
+		<fdir1>0 0 0</fdir1>
+		<kp>10000000000000.000000</kp>
+		<kd>100000000000.000000</kd>
+		<minDepth>0</minDepth>
+		<maxVel>-1</maxVel>
+	</gazebo>
+
+	<gazebo reference="top_part_left_link">
+		<mu1 value="0" />
+		<mu2 value="0" />
+		<kp value="10000000.0" />
+		<kd value="1.0" />
+		<fdir1 value="0 0 0" />
+		<material value="Gazebo/FlatBlack" />
+	</gazebo>
+
+	<gazebo reference="bottom_part_left_link">
+		<mu1>0</mu1>
+		<mu2>0</mu2>
+		<fdir1>0 0 0</fdir1>
+		<kp>10000000000000.000000</kp>
+		<kd>100000000000.000000</kd>
+		<minDepth>0</minDepth>
+		<maxVel>-1</maxVel>
+		<material>Gazebo/FlatBlack</material>
+	</gazebo>
+
+
+	<gazebo reference="FL_wheel_1_link">
+		<mu1>.01</mu1>
+		<mu2>.01</mu2>
+		<fdir1>0 0 0</fdir1>
+		<kp>10000000000000.000000</kp>
+		<kd>100000000000.000000</kd>
+		<minDepth>0</minDepth>
+		<maxVel>-1</maxVel>
+	</gazebo>
+
+	<gazebo reference="FL_wheel_2_link">
+		<mu1>.01</mu1>
+		<mu2>.01</mu2>
+		<fdir1>0 0 0</fdir1>
+		<kp>10000000000000.000000</kp>
+		<kd>100000000000.000000</kd>
+		<minDepth>0</minDepth>
+		<maxVel>-1</maxVel>
+	</gazebo>
+
+	<gazebo reference="rear_right_buggy_link">
+		<mu1>0</mu1>
+		<mu2>0</mu2>
+		<fdir1>0 0 0</fdir1>
+		<kp>10000000000000.000000</kp>
+		<kd>100000000000.000000</kd>
+		<minDepth>0</minDepth>
+		<maxVel>-1</maxVel>
+		<material>Gazebo/FlatBlack</material>
+	</gazebo>
+
+	<gazebo reference="RRM_wheel_link">
+		<mu1>1</mu1>
+		<mu2>1</mu2>
+		<fdir1>0 0 0</fdir1>
+		<kp>10000000000000.000000</kp>
+		<kd>100000000000.000000</kd>
+		<minDepth>0</minDepth>
+		<maxVel>10.0</maxVel>
+		<material>Gazebo/FlatBlack</material>
+	</gazebo>
+
+
+	<gazebo reference="r_top_part_right_link">
+		<mu1 value="0" />
+		<mu2 value="0" />
+		<kp value="10000000.0" />
+		<kd value="1.0" />
+		<fdir1 value="0 0 0" />
+		<minDepth value="0" />
+		<maxVel value="0" />
+		<material value="Gazebo/FlatBlack" />
+	</gazebo>
+
+	<gazebo reference="r_bottom_part_right_link">
+		<mu1>0</mu1>
+		<mu2>0</mu2>
+		<fdir1>0 0 0</fdir1>
+		<kp>10000000000000.000000</kp>
+		<kd>100000000000.000000</kd>
+		<minDepth>0</minDepth>
+		<maxVel>-1</maxVel>
+		<material>Gazebo/FlatBlack</material>
+	</gazebo>
+
+
+	<gazebo reference="RR_wheel_1_link">
+		<mu1>.01</mu1>
+		<mu2>.01</mu2>
+		<fdir1>0 0 0</fdir1>
+		<kp>10000000000000.000000</kp>
+		<kd>100000000000.000000</kd>
+		<minDepth>0</minDepth>
+		<maxVel>-1</maxVel>
+	</gazebo>
+
+	<gazebo reference="RR_wheel_2_link">
+		<mu1>.01</mu1>
+		<mu2>.01</mu2>
+		<fdir1>0 0 0</fdir1>
+		<kp>10000000000000.000000</kp>
+		<kd>100000000000.000000</kd>
+		<minDepth>0</minDepth>
+		<maxVel>-1</maxVel>
+	</gazebo>
+
+
+	<gazebo reference="rear_left_buggy_link">
+		<mu1>0</mu1>
+		<mu2>0</mu2>
+		<fdir1>0 0 0</fdir1>
+		<kp>10000000000000.000000</kp>
+		<kd>100000000000.000000</kd>
+		<minDepth>0</minDepth>
+		<maxVel>-1</maxVel>
+		<material>Gazebo/FlatBlack</material>
+	</gazebo>
+
+	<gazebo reference="RLM_wheel_link">
+		<mu1>1</mu1>
+		<mu2>1</mu2>
+		<fdir1>0 0 0</fdir1>
+		<kp>10000000000000.000000</kp>
+		<kd>100000000000.000000</kd>
+		<minDepth>0</minDepth>
+		<maxVel>10.0</maxVel>
+		<material>Gazebo/FlatBlack</material>
+	</gazebo>
+
+
+	<gazebo reference="r_top_buggy_left_link">
+		<mu1 value="0" />
+		<mu2 value="0" />
+		<kp value="10000000.0" />
+		<kd value="1.0" />
+		<fdir1 value="0 0 0" />
+		<material value="Gazebo/FlatBlack" />
+	</gazebo>
+
+	<gazebo reference="r_bottom_buggy_left_link">
+		<mu1>0</mu1>
+		<mu2>0</mu2>
+		<fdir1>0 0 0</fdir1>
+		<kp>10000000000000.000000</kp>
+		<kd>100000000000.000000</kd>
+		<minDepth>0</minDepth>
+		<maxVel>-1</maxVel>
+		<material>Gazebo/FlatBlack</material>
+	</gazebo>
+
+
+	<gazebo reference="RL_wheel_1_link">
+		<mu1>.01</mu1>
+		<mu2>.01</mu2>
+		<fdir1>0 0 0</fdir1>
+		<kp>10000000000000.000000</kp>
+		<kd>100000000000.000000</kd>
+		<minDepth>0</minDepth>
+		<maxVel>-1</maxVel>
+	</gazebo>
+
+	<gazebo reference="RL_wheel_2_link">
+		<mu1>.01</mu1>
+		<mu2>.01</mu2>
+		<fdir1>0 0 0</fdir1>
+		<kp>10000000000000.000000</kp>
+		<kd>100000000000.000000</kd>
+		<minDepth>0</minDepth>
+		<maxVel>-1</maxVel>
+	</gazebo>
+
+	<gazebo reference="base_joint">
+		<stopCfm>0</stopCfm>
+		<stopErp>1.0</stopErp>
+	</gazebo>
+
+
+	<gazebo>
+		<plugin name="agv_controller" filename="libgazebo_ros_diff_drive.so">
+			<commandTopic>/cmd_vel</commandTopic>
+			<odometryTopic>odom</odometryTopic>
+			<odometryFrame>odom</odometryFrame>
+			<odometrySource>world</odometrySource>
+			<publishOdomTF>false</publishOdomTF>
+			<robotBaseFrame>base_footprint</robotBaseFrame>
+			<publishWheelTF>false</publishWheelTF>
+			<publishTf>true</publishTf>
+			<publishWheelJointState>false</publishWheelJointState>
+			<legacyMode>false</legacyMode>
+			<updateRate>30</updateRate>
+			<leftJoint>RLM_wheel_joint</leftJoint>
+			<rightJoint>RRM_wheel_joint</rightJoint>
+			<wheelSeparation>0.4775</wheelSeparation>
+			<wheelDiameter>0.21</wheelDiameter>
+			<wheelAcceleration>1</wheelAcceleration>
+			<wheelTorque>100</wheelTorque>
+			<rosDebugLevel>na</rosDebugLevel>
+		</plugin>
+	</gazebo>
+
+	<!-- Scanner Plugins -->
+
+	<!-- Front Scanner -->
+	<gazebo reference="front_scan_link">
+		<material>Gazebo/YellowGlow</material>
+		<sensor type="ray" name="lds_lfcd_sensor">
+			<pose>0 0 0 0 0 0</pose>
+			<visualize>$(arg laser_visual)</visualize>
+			<update_rate>30</update_rate>
+			<ray>
+				<scan>
+					<horizontal>
+						<samples>1280</samples>
+						<resolution>0.17</resolution>
+						<min_angle>-2.34</min_angle>
+						<max_angle>2.34</max_angle>
+					</horizontal>
+				</scan>
+				<range>
+					<min>0.010</min>
+					<max>30</max>
+					<resolution>0.01</resolution>
+				</range>
+				<noise>
+					<type>gaussian</type>
+					<mean>0.0</mean>
+					<stddev>0.005</stddev>
+				</noise>
+			</ray>
+			<plugin name="gazebo_ros_lds_lfcd_controller" filename="libgazebo_ros_laser.so">
+				<topicName>front_scan</topicName>
+				<frameName>front_scan_link</frameName>
+			</plugin>
+		</sensor>
+	</gazebo>
+
+	<!-- Rear Scanner -->
+
+	<gazebo reference="rear_scan_link">
+		<material>Gazebo/YellowGlow</material>
+		<sensor type="ray" name="lds_lfcd_sensor_rear">
+			<pose>0 0 0 0 0 0</pose>
+			<visualize>$(arg laser_visual)</visualize>
+			<update_rate>30</update_rate>
+			<ray>
+				<scan>
+					<horizontal>
+						<samples>1280</samples>
+						<resolution>0.17</resolution>
+						<min_angle>-2.34</min_angle>
+						<max_angle>2.34</max_angle>
+					</horizontal>
+				</scan>
+				<range>
+					<min>0.010</min>
+					<max>30</max>
+					<resolution>0.01</resolution>
+				</range>
+				<noise>
+					<type>gaussian</type>
+					<mean>0.0</mean>
+					<stddev>0.005</stddev>
+				</noise>
+			</ray>
+			<plugin name="gazebo_ros_lds_lfcd_controller_rear" filename="libgazebo_ros_laser.so">
+				<topicName>rear_scan</topicName>
+				<frameName>rear_scan_link</frameName>
+			</plugin>
+		</sensor>
+	</gazebo>
+
+
+	<!-- odom plugin 
+  <gazebo>
+<plugin name="p3d_base_controller" filename="libgazebo_ros_p3d.so">
+  <alwaysOn>true</alwaysOn>
+  <updateRate>50.0</updateRate>
+  <bodyName>base_link</bodyName>
+  <topicName>odom_gazebo</topicName>
+  <gaussianNoise>0.01</gaussianNoise>
+  <frameName>world</frameName>
+  <xyzOffsets>0 0 0</xyzOffsets>
+  <rpyOffsets>0 0 0</rpyOffsets>
+</plugin>
+    </gazebo>-->
+
+	<!-- IMU plugin 
+<gazebo>
+<plugin name="gazebo_ros_imu_controller" filename="libgazebo_ros_imu.so">
+  <topicName>imu/data</topicName>
+  <serviceName>imu/service</serviceName>
+  <bodyName>base_link</bodyName>
+  <gaussianNoise>0</gaussianNoise>
+  <rpyOffsets>0 0 0</rpyOffsets>
+   <updateRate>10.0</updateRate>
+   <alwaysOn>true</alwaysOn>
+  <gaussianNoise>0</gaussianNoise>
+</plugin>
+</gazebo>-->
+
+
+</robot>

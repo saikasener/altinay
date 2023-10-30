@@ -1,0 +1,2 @@
+bool load_conveyor
+bool unload_conveyor

@@ -1,0 +1,8 @@
+<launch>
+<node pkg="rosserial_python" type="serial_node_ult3_4.py" name="moobot_ultrasonic3_4" output="screen">
+    <param name="port" value="/dev/ard_ult3_4"/>
+    <param name="baud" value="57600"/>
+    <param name="tf_prefix" value=""/>
+    <remap from="/ultrasonic_status" to="/ultrasonic_status3_4"/>
+  </node>
+  </launch>
