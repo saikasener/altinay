@@ -1,0 +1,34 @@
+2023-08-29 13:09:54,484 - INFO: try to use last connected port /dev/ttyUSB0 115200
+2023-08-29 13:09:55,839 - ERROR: Parse data as string failed
+2023-08-29 13:09:56,046 - INFO: start to connect serial port
+2023-08-29 13:09:56,046 - INFO: try to use connected port /dev/ttyS4 in history
+2023-08-29 13:09:56,046 - INFO: try to use connected port /dev/ttyUSB3 in history
+2023-08-29 13:09:56,046 - INFO: try to use connected port /dev/ttyUSB2 in history
+2023-08-29 13:09:56,046 - INFO: try /dev/ttyS4:460800
+2023-08-29 13:09:56,046 - INFO: try to use connected port /dev/ttyUSB1 in history
+2023-08-29 13:09:56,051 - INFO: try /dev/ttyUSB3:460800
+2023-08-29 13:09:59,810 - INFO: try /dev/ttyUSB1:460800
+2023-08-29 13:10:01,311 - INFO: try /dev/ttyUSB3:115200
+2023-08-29 13:10:01,326 - INFO: try /dev/ttyS4:115200
+2023-08-29 13:10:05,106 - INFO: try /dev/ttyUSB1:115200
+2023-08-29 13:10:06,608 - INFO: try /dev/ttyS4:57600
+2023-08-29 13:10:06,638 - INFO: try /dev/ttyUSB3:57600
+2023-08-29 13:10:10,390 - INFO: try /dev/ttyUSB1:57600
+2023-08-29 13:10:11,873 - INFO: try /dev/ttyS4:230400
+2023-08-29 13:10:11,938 - INFO: try /dev/ttyUSB3:230400
+2023-08-29 13:10:15,683 - INFO: try /dev/ttyUSB1:230400
+2023-08-29 13:10:17,117 - INFO: try /dev/ttyS4:38400
+2023-08-29 13:10:17,223 - INFO: try /dev/ttyUSB3:38400
+2023-08-29 13:10:20,968 - INFO: try /dev/ttyUSB1:38400
+2023-08-29 13:10:22,364 - INFO: try to use connected port /dev/ttyUSB0 in history
+2023-08-29 13:10:22,390 - INFO: /dev/ttyUSB0 : 115200 open failed
+2023-08-29 13:10:22,401 - INFO: try /dev/ttyUSB0:460800
+2023-08-29 13:10:22,575 - INFO: Error while confirm device read failed: device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+2023-08-29 13:10:22,716 - INFO: try /dev/ttyUSB0:115200
+2023-08-29 13:10:22,874 - INFO: Error while confirm device read failed: device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+2023-08-29 13:10:22,996 - INFO: try /dev/ttyUSB0:57600
+2023-08-29 13:10:23,178 - INFO: Error while confirm device read failed: device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+2023-08-29 13:10:23,319 - INFO: try /dev/ttyUSB0:230400
+2023-08-29 13:10:23,475 - INFO: Error while confirm device read failed: device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+2023-08-29 13:10:23,616 - INFO: try /dev/ttyUSB0:38400
+2023-08-29 13:10:23,780 - INFO: Error while confirm device read failed: device reports readiness to read but returned no data (device disconnected or multiple access on port?)

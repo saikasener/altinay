@@ -1,0 +1,1 @@
+bool S_Protection

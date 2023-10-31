@@ -1,0 +1,32 @@
+<launch>
+
+<!-- MOOBOT BMS 
+  <node pkg="moobot_bms" type="bms_node.py" name="moobot_bms" output="screen"/>  -->
+
+<!-- LAUNCH ODOM NODE -->
+  <node pkg="moobot_bringup" type="moobot_odometry" name="moobot_odometry" output="screen" />  
+
+<!-- SCANNERS 
+  <include file="$(find moobot_navigation)/launch/nanoscan_test.launch"/> 
+-->
+
+<!-- WIRELESS CONTROLLER 
+  <include file="$(find ds4_driver)/launch/ds4_twist.launch"/>  -->
+
+<!-- MOOBOT LIGHTS 
+  <node pkg="rosserial_python" type="serial_node_led.py" name="moobot_lights" output="screen">
+    <param name="port" value="/dev/ard_lights"/>
+    <param name="baud" value="57600"/>
+    <param name="tf_prefix" value=""/>
+  </node> -->
+
+ <!-- Launch PLC Program  
+  <node pkg="moobot_plc" type="connect_plc" name="connect_plc" launch-prefix="ethercat_grant" output="screen" /> -->
+
+ <!-- Launch Nextion 
+  <node pkg="moobot_bringup" type="nextion.py" name="nextion" /> -->
+
+ <!-- PGV Data Matrix Code Reader 
+  <node pkg="moobot_pgv" type="moobot_pgv_scan" name="moobot_pgv" /> -->
+
+</launch>

@@ -1,0 +1,146 @@
+{
+	"BUILD_DIR" : "/home/rnd/moobot_ws/build/moobot_ui/dashboard_autogen",
+	"CMAKE_BINARY_DIR" : "/home/rnd/moobot_ws/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/rnd/moobot_ws/build/moobot_ui",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/rnd/moobot_ws/src/moobot_ui",
+	"CMAKE_EXECUTABLE" : "/usr/bin/cmake",
+	"CMAKE_SOURCE_DIR" : "/home/rnd/moobot_ws/src",
+	"HEADERS" : 
+	[
+		[
+			"/home/rnd/moobot_ws/src/moobot_ui/src/agv_nav.h",
+			"MU",
+			"UVLADIE3JM/moc_agv_nav.cpp"
+		],
+		[
+			"/home/rnd/moobot_ws/src/moobot_ui/src/dashboard.h",
+			"MU",
+			"UVLADIE3JM/moc_dashboard.cpp"
+		],
+		[
+			"/home/rnd/moobot_ws/src/moobot_ui/src/joypad.h",
+			"MU",
+			"UVLADIE3JM/moc_joypad.cpp"
+		],
+		[
+			"/home/rnd/moobot_ws/src/moobot_ui/src/showspeed.h",
+			"MU",
+			"UVLADIE3JM/moc_showspeed.cpp"
+		],
+		[
+			"/home/rnd/moobot_ws/src/moobot_ui/src/station.h",
+			"MU",
+			"UVLADIE3JM/moc_station.cpp"
+		],
+		[
+			"/home/rnd/moobot_ws/src/moobot_ui/src/station_tool.h",
+			"MU",
+			"UVLADIE3JM/moc_station_tool.cpp"
+		],
+		[
+			"/home/rnd/moobot_ws/src/moobot_ui/src/statuspanel.h",
+			"MU",
+			"UVLADIE3JM/moc_statuspanel.cpp"
+		],
+		[
+			"/home/rnd/moobot_ws/src/moobot_ui/src/switch.h",
+			"MU",
+			"UVLADIE3JM/moc_switch.cpp"
+		],
+		[
+			"/home/rnd/moobot_ws/src/moobot_ui/src/way_point.h",
+			"MU",
+			"UVLADIE3JM/moc_way_point.cpp"
+		],
+		[
+			"/home/rnd/moobot_ws/src/moobot_ui/src/way_point_tool.h",
+			"MU",
+			"UVLADIE3JM/moc_way_point_tool.cpp"
+		]
+	],
+	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
+	"INCLUDE_DIR" : "/home/rnd/moobot_ws/build/moobot_ui/dashboard_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/rnd/moobot_ws/build/moobot_ui/dashboard_autogen/mocs_compilation.cpp",
+	"MOC_DEFINITIONS" : 
+	[
+		"QT_CORE_LIB",
+		"QT_GUI_LIB",
+		"QT_NETWORK_LIB",
+		"QT_NO_DEBUG",
+		"QT_PRINTSUPPORT_LIB",
+		"QT_WIDGETS_LIB",
+		"ROSCONSOLE_BACKEND_LOG4CXX",
+		"ROS_BUILD_SHARED_LIBS=1",
+		"ROS_PACKAGE_NAME=\"moobot_ui\""
+	],
+	"MOC_DEPEND_FILTERS" : 
+	[
+		[
+			"Q_PLUGIN_METADATA",
+			"[\n][ \t]*Q_PLUGIN_METADATA[ \t]*\\([^\\)]*FILE[ \t]*\"([^\"]+)\""
+		]
+	],
+	"MOC_INCLUDES" : 
+	[
+		"/home/rnd/moobot_ws/devel/include",
+		"/opt/ros/noetic/include",
+		"/opt/ros/noetic/include/xmlrpcpp",
+		"/usr/include/eigen3",
+		"/usr/include/OGRE/Overlay",
+		"/usr/include/OGRE",
+		"/usr/include/x86_64-linux-gnu/qt5",
+		"/usr/include/x86_64-linux-gnu/qt5/QtWidgets",
+		"/usr/include/x86_64-linux-gnu/qt5/QtGui",
+		"/usr/include/x86_64-linux-gnu/qt5/QtCore",
+		"/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++",
+		"/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport",
+		"/usr/include/x86_64-linux-gnu/qt5/QtNetwork",
+		"/usr/include",
+		"/usr/include/c++/9",
+		"/usr/include/x86_64-linux-gnu/c++/9",
+		"/usr/include/c++/9/backward",
+		"/usr/lib/gcc/x86_64-linux-gnu/9/include",
+		"/usr/local/include",
+		"/usr/include/x86_64-linux-gnu"
+	],
+	"MOC_MACRO_NAMES" : [ "Q_OBJECT", "Q_GADGET", "Q_NAMESPACE" ],
+	"MOC_OPTIONS" : [],
+	"MOC_PATH_PREFIX" : true,
+	"MOC_PREDEFS_CMD" : 
+	[
+		"/usr/bin/c++",
+		"-dM",
+		"-E",
+		"-c",
+		"/usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp"
+	],
+	"MOC_PREDEFS_FILE" : "/home/rnd/moobot_ws/build/moobot_ui/dashboard_autogen/moc_predefs.h",
+	"MOC_RELAXED_MODE" : false,
+	"MOC_SKIP" : [],
+	"MULTI_CONFIG" : false,
+	"PARALLEL" : 4,
+	"PARSE_CACHE_FILE" : "/home/rnd/moobot_ws/build/moobot_ui/CMakeFiles/dashboard_autogen.dir/ParseCache.txt",
+	"QT_MOC_EXECUTABLE" : "/usr/lib/qt5/bin/moc",
+	"QT_UIC_EXECUTABLE" : "/usr/lib/qt5/bin/uic",
+	"QT_VERSION_MAJOR" : 5,
+	"SETTINGS_FILE" : "/home/rnd/moobot_ws/build/moobot_ui/CMakeFiles/dashboard_autogen.dir/AutogenUsed.txt",
+	"SOURCES" : 
+	[
+		[ "/home/rnd/moobot_ws/src/moobot_ui/src/agv_nav.cpp", "MU" ],
+		[ "/home/rnd/moobot_ws/src/moobot_ui/src/dashboard.cpp", "MU" ],
+		[ "/home/rnd/moobot_ws/src/moobot_ui/src/joypad.cpp", "MU" ],
+		[ "/home/rnd/moobot_ws/src/moobot_ui/src/main.cpp", "MU" ],
+		[ "/home/rnd/moobot_ws/src/moobot_ui/src/showspeed.cpp", "MU" ],
+		[ "/home/rnd/moobot_ws/src/moobot_ui/src/station.cpp", "MU" ],
+		[ "/home/rnd/moobot_ws/src/moobot_ui/src/station_tool.cpp", "MU" ],
+		[ "/home/rnd/moobot_ws/src/moobot_ui/src/statuspanel.cpp", "MU" ],
+		[ "/home/rnd/moobot_ws/src/moobot_ui/src/switch.cpp", "MU" ],
+		[ "/home/rnd/moobot_ws/src/moobot_ui/src/way_point.cpp", "MU" ],
+		[ "/home/rnd/moobot_ws/src/moobot_ui/src/way_point_tool.cpp", "MU" ]
+	],
+	"UIC_OPTIONS" : [],
+	"UIC_SEARCH_PATHS" : [],
+	"UIC_SKIP" : [],
+	"UIC_UI_FILES" : [],
+	"VERBOSITY" : 0
+}

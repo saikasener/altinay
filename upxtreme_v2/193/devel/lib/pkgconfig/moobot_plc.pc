@@ -1,0 +1,8 @@
+prefix=/home/rnd/moobot_ws/devel
+
+Name: moobot_plc
+Description: Description of moobot_plc
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

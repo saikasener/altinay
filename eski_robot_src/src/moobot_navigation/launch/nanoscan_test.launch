@@ -1,0 +1,19 @@
+<launch>
+
+<!-- Robot Description -->
+    <arg name="model" default="moobot" />
+    <arg name="urdf_model_path" default="$(find moobot_description)/urdf/$(arg model).urdf.xacro" />
+    <param name="robot_description" command="$(find xacro)/xacro $(arg urdf_model_path)" />
+
+    <!-- Joint and Robot States -->
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" respawn="false" output="screen">
+        <param name="rate" type="double" value="30.0" />
+    </node>
+
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen">
+        <param name="publish_frequency" type="double" value="30.0" />
+    </node>
+    
+    <include file="$(find moobot_navigation)/launch/nanoscan_scanners.launch"/>    
+    <include file="$(find moobot_navigation)/launch/ira_laserscan_merge_nano.launch"/>
+</launch>

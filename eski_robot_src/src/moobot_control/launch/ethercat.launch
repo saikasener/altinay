@@ -1,0 +1,18 @@
+<launch>
+<!-- 
+  <env name="LD_LIBRARY_PATH" value="$(env LD_LIBRARY_PATH)" />
+   /> -->
+  <node pkg="moobot_control" type="rosethmaster_lift.py" name="ethercat" cwd="node" output="screen">
+
+</node>
+</launch>
+
+<!-- launch-prefix="ethercat_grant" -->
+
+
+
+
+
+
+
+

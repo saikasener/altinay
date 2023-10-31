@@ -1,0 +1,17 @@
+<launch>
+
+    <!-- Robot Description -->
+    <include file="$(find moobot_bringup)/launch/joint_robot_publishers.launch"/>
+
+    <!-- Arduino & IMU & Odom & PGV -->
+    <include file="$(find moobot_bringup)/launch/moobot_core.launch"/>
+
+    <!-- Scanners -->
+    <include file="$(find moobot_navigation)/launch/front_scanner.launch" ns="front" />
+    <include file="$(find moobot_navigation)/launch/rear_scanner.launch" ns="rear" />
+    <include file="$(find moobot_navigation)/launch/ira_laserscan_merge.launch" />
+
+    <!-- Joystick -->
+    <include file="$(find ds4_driver)/launch/ds4_twist.launch"/>
+
+</launch>

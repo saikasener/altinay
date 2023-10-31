@@ -1,0 +1,26 @@
+
+(cl:in-package :asdf)
+
+(defsystem "moobot_msgs-msg"
+  :depends-on (:roslisp-msg-protocol :roslisp-utils :std_msgs-msg
+)
+  :components ((:file "_package")
+    (:file "SensorState" :depends-on ("_package_SensorState"))
+    (:file "_package_SensorState" :depends-on ("_package"))
+    (:file "bms_status" :depends-on ("_package_bms_status"))
+    (:file "_package_bms_status" :depends-on ("_package"))
+    (:file "conveyor_status" :depends-on ("_package_conveyor_status"))
+    (:file "_package_conveyor_status" :depends-on ("_package"))
+    (:file "lift_status" :depends-on ("_package_lift_status"))
+    (:file "_package_lift_status" :depends-on ("_package"))
+    (:file "moobot_scanner" :depends-on ("_package_moobot_scanner"))
+    (:file "_package_moobot_scanner" :depends-on ("_package"))
+    (:file "moobot_sensor_status" :depends-on ("_package_moobot_sensor_status"))
+    (:file "_package_moobot_sensor_status" :depends-on ("_package"))
+    (:file "moobot_status" :depends-on ("_package_moobot_status"))
+    (:file "_package_moobot_status" :depends-on ("_package"))
+    (:file "plc_data" :depends-on ("_package_plc_data"))
+    (:file "_package_plc_data" :depends-on ("_package"))
+    (:file "ultrasonic_status" :depends-on ("_package_ultrasonic_status"))
+    (:file "_package_ultrasonic_status" :depends-on ("_package"))
+  ))

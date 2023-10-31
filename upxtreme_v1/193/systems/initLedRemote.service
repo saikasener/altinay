@@ -1,0 +1,17 @@
+[Unit]
+Description=Moobot Scanner Initialization
+After=remote-fs.target NetworkManager.service time-sync.target
+After=syslog.target
+After=rosinit.service
+StartLimitIntervalSec=120
+StartLimitBurst=10
+
+[Service]
+User=rnd
+Type=forking
+ExecStart=/bin/bash /usr/local/bin/initEthercatService.sh start
+Restart=always
+RestartSec=20s
+
+[Install]
+WantedBy=multi-user.target

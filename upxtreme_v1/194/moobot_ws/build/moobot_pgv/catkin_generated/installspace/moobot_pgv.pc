@@ -1,0 +1,8 @@
+prefix=/home/rnd/moobot_ws/install
+
+Name: moobot_pgv
+Description: Description of moobot_pgv
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: 

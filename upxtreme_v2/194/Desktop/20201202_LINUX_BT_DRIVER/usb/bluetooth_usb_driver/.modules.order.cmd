@@ -1,0 +1,1 @@
+cmd_/home/rnd/Desktop/20201202_LINUX_BT_DRIVER/usb/bluetooth_usb_driver/modules.order := {   echo /home/rnd/Desktop/20201202_LINUX_BT_DRIVER/usb/bluetooth_usb_driver/rtk_btusb.ko; :; } | awk '!x[$$0]++' - > /home/rnd/Desktop/20201202_LINUX_BT_DRIVER/usb/bluetooth_usb_driver/modules.order

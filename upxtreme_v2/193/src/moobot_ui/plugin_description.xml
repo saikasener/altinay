@@ -1,0 +1,16 @@
+<library path="lib/libagvnav">
+<class name="moobot_ui/Station"
+         type="moobot_ui::StationTool"
+         base_class_type="rviz::Tool">
+    <description>
+      Tool for adding stations on the ground plane in rviz.
+    </description>
+  </class>
+<class name="moobot_ui/WayPoint"
+         type="moobot_ui::WayPointTool"
+         base_class_type="rviz::Tool">
+    <description>
+      Tool for adding way points on the ground plane in rviz.
+    </description>
+  </class>
+</library>

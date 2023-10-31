@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="addr" default="" />
+
+  <arg name="dof" default="6" />
+  <arg name="stamped" default="false" />
+
+  <include file="$(find ds4_driver)/launch/ds4_driver.launch" >
+    <arg name="addr" value="$(arg addr)" />
+    <arg name="use_standard_msgs" value="false" />
+  </include>
+
+  <node pkg="ds4_driver" type="ds4_twist_node.py" name="ds4_twist" output="screen" >
+    <rosparam command="load" file="$(find ds4_driver)/config/twist_$(arg dof)dof.yaml" />
+
+    <param name="stamped" value="$(arg stamped)" />
+  </node>
+  
+  <node pkg="topic_tools" type="throttle" name="joy_to_cmd" args="messages /cmd_vel_joy 20 /cmd_vel" />
+  <node pkg="ds4_driver" type="joylift.py" name="joylift" />
+</launch>

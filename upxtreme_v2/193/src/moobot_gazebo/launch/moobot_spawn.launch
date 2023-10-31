@@ -1,0 +1,40 @@
+<launch>
+  <!-- Model Description -->
+  <arg name="model" default="moobot"/>
+  <arg name="urdf_model_path" default="$(find moobot_description)/urdf/$(arg model).urdf.xacro"/>
+  <param name="robot_description" command="$(find xacro)/xacro --inorder $(arg urdf_model_path)" />
+  <arg name="gui_on" default="true" />
+  <arg name="controller_on" default="true" />
+
+  <!-- Model Spawn Position -->
+  <arg name="x_pos" default="0.0"/>
+  <arg name="y_pos" default="0.0"/>
+  <arg name="z_pos" default="0.0"/>
+
+  <!-- World Description -->
+  <arg name="default_world" default="$(find moobot_description)/worlds/moobot_empty_building.world"/>
+
+  <!-- Start Gazebo Simulation -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(arg default_world)"/>
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="$(arg gui_on)"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
+  </include>
+
+  <!-- Spawn Robot -->
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model agv -x $(arg x_pos) -y $(arg y_pos) -z $(arg z_pos) -param robot_description" />
+
+  <!-- Spawn Conveyor -->
+  <node name="spawn_conveyor" pkg="gazebo_ros" type="spawn_model" args="-gazebo -model converyor_main -x -3.0 -y $(arg y_pos) -z $(arg z_pos) -Y 1.57 -file /home/$(env USER)/moobot_ws/src/moobot_description/sdf/conveyor_main.sdf" />
+
+  <!-- Robot Cell -->
+  <node name="spawn_cell" pkg="gazebo_ros" type="spawn_model" args="-gazebo -model robot_cell -x -4.0 -y -2.024 -z $(arg z_pos) -Y 1.57 -file /home/$(env USER)/moobot_ws/src/moobot_description/sdf/conveyor_main.sdf" />
+
+  <!-- Kontrol Arayuzu -->
+  <node name="rqt_robot_steering" pkg="rqt_robot_steering" type="rqt_robot_steering" if="$(arg controller_on)">
+    <param name="default_topic" value="/cmd_vel"/>
+  </node>
+</launch>

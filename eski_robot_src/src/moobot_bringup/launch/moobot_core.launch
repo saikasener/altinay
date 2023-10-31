@@ -1,0 +1,90 @@
+<launch>
+
+<!-- MOOBOT CORE  -->
+  <node pkg="rosserial_python" type="serial_node_core.py" name="moobot_core" output="screen">
+    <param name="port" value="/dev/ard_core"/>
+    <param name="baud" value="57600"/>
+    <param name="tf_prefix" value=""/>
+  </node> 
+
+<!-- MOOBOT LIGHTS -->
+  <node pkg="rosserial_python" type="serial_node_led.py" name="moobot_lights" respawn="true" output="screen">
+    <param name="port" value="/dev/ard_lights"/>
+    <param name="baud" value="57600"/>
+    <param name="tf_prefix" value=""/>
+  </node>
+
+<!-- MOOBOT BMS --> 
+  <node pkg="rosserial_python" type="serial_node_bms.py" name="moobot_bms" output="screen">
+    <param name="port" value="/dev/ard_bms"/>
+    <param name="baud" value="57600"/>
+    <param name="tf_prefix" value=""/>
+  </node>
+
+<!-- MOOBOT CONVEYOR --> 
+  <node pkg="rosserial_python" type="serial_node_conveyor.py" name="moobot_lift" respawn="true"  output="screen">
+    <param name="port" value="/dev/ard_lift"/>
+    <param name="baud" value="57600"/>
+    <param name="tf_prefix" value=""/>
+  </node>
+<!-- MOOBOT ULTRASONIC 1-2
+<node pkg="rosserial_python" type="serial_node_ult1_2.py" name="moobot_ultrasonic1_2" output="screen">
+    <param name="port" value="/dev/ard_ult1_2"/>
+    <param name="baud" value="57600"/>
+    <param name="tf_prefix" value=""/>
+    <remap from="/ultrasonic_status" to="/ultrasonic_status1_2"/> 
+  </node> -->
+<!-- MOOBOT ULTRASONIC 3-4
+<node pkg="rosserial_python" type="serial_node_ult3_4.py" name="moobot_ultrasonic3_4" output="screen">
+    <param name="port" value="/dev/ard_ult3_4"/>
+    <param name="baud" value="57600"/>
+    <param name="tf_prefix" value=""/>
+    <remap from="/ultrasonic_status" to="/ultrasonic_status3_4"/> 
+  </node> -->
+
+ <!-- Launch Webcam
+  <node name="usb_cam" pkg="usb_cam" type="usb_cam_node" output="log" >
+    <param name="video_device" value="/dev/video0" />
+    <param name="image_width" value="320" />
+    <param name="image_height" value="180" />
+    <param name="pixel_format" value="yuyv" />
+    <param name="camera_frame_id" value="usb_cam" />
+    <param name="io_method" value="userptr"/>
+    <param name="framerate" value="15" />
+  </node> -->
+
+ <!-- Launch PLC Program --> 
+  <node pkg="moobot_plc" type="connect_plc" name="connect_plc" launch-prefix="ethercat_grant" output="screen" />
+
+ <!-- Launch Odom Node -->
+  <node pkg="moobot_bringup" type="moobot_odometry" name="moobot_odometry" output="screen" />
+
+ <!-- Launch Nextion
+  <node pkg="moobot_bringup" type="nextion.py" name="/nextion" /> -->
+
+  <arg name="serial_port" default="/dev/cnv_imu" />
+  <arg name="frame_id" default="imu_link" />
+  <arg name="operation_mode" default="IMU"/>
+  <arg name="oscillator" default="INTERNAL" />
+  <arg name="reset_orientation" default="true" />
+  <arg name="frequency" default="200" /> 
+  <arg name="use_magnetometer" default="false" />
+  <arg name="use_temperature" default="false" />
+
+ <!-- PGV Data Matrix Code Reader
+  <node pkg="moobot_pgv" type="moobot_pgv_scan" name="moobot_pgv" /> -->
+
+ <!--
+  <node pkg="ros_imu_bno055" type="imu_ros.py" name="ros_imu_bno055_node" output="screen">
+        <param name="serial_port" value="$(arg serial_port)" />
+        <param name="frame_id" value="$(arg frame_id)" />
+        <param name="operation_mode" value="$(arg operation_mode)" />
+        <param name="oscillator" value="$(arg oscillator)" />
+        <param name="reset_orientation" value = "$(arg reset_orientation)" />
+        <param name="frequency" value="$(arg frequency)" />
+        <param name="use_magnetometer" value="$(arg use_magnetometer)" />    
+        <param name="use_temperature" value="$(arg use_temperature)" />    
+  </node> -->
+
+
+</launch>

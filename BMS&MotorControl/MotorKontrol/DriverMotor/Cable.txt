@@ -1,0 +1,22 @@
+Encoder Cable
+5v -> Kahve
+GND -> Beyaz
+A- -> Yeşil-siyah
+A+ -> Yeşil
+B- -> Sarı-siyah
+B+ -> Sarı
+I- -> Gri-siyah
+I+ -> Gri
+  
+
+Motor Cable
+U (A) -> Sarı
+V (B) -> Yeşil
+W (C) -> Mavi       
+
+
+MotorHallDriverCable
+Blue   W(C) -> H3
+Green  V(B) -> H2
+Yellow U(A) -> H1
+                            

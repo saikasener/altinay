@@ -1,0 +1,199 @@
+#!/usr/bin/env python3
+import rospy
+from moobot_msgs.msg import moobot_status, bms_status
+import serial
+import serial.tools.list_ports
+import time
+
+import threading
+from datetime import datetime
+import signal
+import sys
+
+
+
+BATTERY_LEVEL_1_PIC_ID = 18
+BATTERY_LEVEL_2_PIC_ID = 19
+BATTERY_LEVEL_3_PIC_ID = 20
+BATTERY_LEVEL_4_PIC_ID = 21
+
+BatteryLevel1 = 22.8
+BatteryLevel2 = 23.5
+BatteryLevel3 = 24.3
+BatteryLevel4 = 25.1
+
+class Received_Command:
+    page_no = 0
+    button_no = 0
+
+
+interaction = {'None': 0,
+               'SuccessOnly': 1,
+               'FailOnly': 2,
+               'Always': 3}
+
+COLORS = {'RED': 63488,
+          'BLUE': 31,
+          'GRAY': 33840,
+          'BLACK': 0,
+          'WHITE': 65535,
+          'GREEN': 2016,
+          'BROWN': 48192,
+          'YELLOW': 65504}
+
+SUPPORT_BAUD_RATES = [2400, 4800,
+                      9600, 19200,
+                      38400, 57600,
+                      115200]
+
+RESPONSE = {0x00 : 'Invalid Instruction',
+            0x01 : 'Successful Execution',
+            0x03 : 'Page ID Invalid',
+            0x04 : 'Picture ID Invalid',
+            0x05 : 'Font ID Invalid',
+            0x11 : 'Baud Rate Setting Invalid',
+            0x12 : 'Curve Control Invalid',
+            0x1A : 'Variable Name Invalid',
+            0x1B : 'Variable Operation Invalid',
+            0x1C : 'Failed to Assign',
+            0x1D : 'PERFROM Failed',
+            0x1E : 'Invalid Parameter Quantity',
+            0x1F : 'IO Operation Failed'}
+
+TERMINATOR = bytearray([0xFF, 0xFF, 0xFF])
+
+
+def agv_status_listener(data):
+	
+	#check emergency
+	if data.emergency == True:
+		command = str.encode('status.txt=\"Reset Need\"')
+		nexSer.write(command + TERMINATOR)
+
+		command = str.encode('mode.txt=\"MANUAL\"')
+		nexSer.write(command + TERMINATOR)
+
+		job_str = 'job.txt=' + '\"' + str(data.job) + '\"'
+		command = str.encode(job_str)
+
+	else:
+		if data.agv_stopped == True:
+			command = str.encode('status.txt=\"Stopped\"')
+			nexSer.write(command + TERMINATOR)
+
+		#check mode
+		if data.agv_mode == 0: # auto mode
+			command = str.encode('mode.txt=\"Auto\"')
+			nexSer.write(command + TERMINATOR)
+
+			# check job
+			job_str = 'job.txt=' + '\"' + str(data.job) + '\"'
+			command = str.encode(job_str)
+			nexSer.write(command + TERMINATOR)
+		elif data.agv_mode == 1:
+			command = str.encode('mode.txt=\"Manual\"')
+			nexSer.write(command + TERMINATOR)
+
+			command = str.encode('job.txt=\"No job\"') #TODO
+			nexSer.write(command + TERMINATOR)
+
+
+
+def bms_status_listener(data):
+	#check voltage
+	b1volt_str = 'battery.b1voltage.txt=' + '\"' + str(round(data.battery_volt_1, 1)) + '\"'
+	command = str.encode(b1volt_str)
+	nexSer.write(command + TERMINATOR)
+	
+	
+	b2volt_str = 'battery.b2voltage.txt=' + '\"' + str(round(data.battery_volt_2, 1)) + '\"'
+	command = str.encode(b2volt_str)
+	nexSer.write(command + TERMINATOR)
+
+
+	#check current
+	b1amp_str = 'battery.b1amp.txt=' + '\"' + str(round(data.current_main, 1)) + '\"'
+	command = str.encode(b1amp_str)
+	nexSer.write(command + TERMINATOR)
+
+	b2amp_str = 'battery.b2amp.txt=' + '\"' + str(round(data.current_main, 1)) + '\"'
+	command = str.encode(b2amp_str)
+	nexSer.write(command + TERMINATOR)
+
+	#check temperature
+	b1deg_str = 'battery.b1deg.txt=' + '\"' + str(round(data.battery_temp_1, 1)) + '\"'
+	command = str.encode(b1deg_str)
+	nexSer.write(command + TERMINATOR)
+
+	b2deg_str = 'battery.b2deg.txt=' + '\"' + str(round(data.battery_temp_2, 1)) + '\"'
+	command = str.encode(b2deg_str)
+	nexSer.write(command + TERMINATOR)
+
+	total_vol = data.battery_volt_total
+
+	if total_vol > BatteryLevel4:
+		command = str.encode('battery_icon.pic=' + str(BATTERY_LEVEL_4_PIC_ID))
+	elif total_vol > BatteryLevel3:
+		command = str.encode('battery_icon.pic=' + str(BATTERY_LEVEL_3_PIC_ID))
+	elif total_vol > BatteryLevel2:
+		command = str.encode('battery_icon.pic=' + str(BATTERY_LEVEL_2_PIC_ID))
+	else:
+		command = str.encode('battery_icon.pic=' + str(BATTERY_LEVEL_1_PIC_ID))
+	nexSer.write(command + TERMINATOR)
+
+def signal_handler(sig, frame):
+	print('You pressed Ctrl+C!')
+	connected = False
+	sys.exit(0)
+
+signal.signal(signal.SIGINT, signal_handler)
+
+
+
+connected = False
+port = '/dev/nextion'
+baud = 9600
+
+nexSer = serial.Serial(port, baud, timeout=0)
+
+
+def read_from_port(ser):	
+	connected = False
+	while not connected:
+		connected = True
+
+	while connected:
+		
+		nexSer.flushInput()
+		nexSer.flushOutput()
+
+		now = datetime.now() # current date and time
+		date_time =  date_time = now.strftime("%m/%d/%Y, %H:%M")
+		
+	
+		date_str = 'date.txt=' + '\"' + date_time + '\"'
+
+		command = str.encode(date_str)
+		nexSer.write(command + TERMINATOR)
+
+		b_date_str = 'battery.date_battery.txt=' + '\"' + date_time + '\"'
+
+		command = str.encode(b_date_str)
+		nexSer.write(command + TERMINATOR)
+
+		
+
+
+
+
+if __name__ == '__main__':
+	rospy.init_node('nextion', anonymous=True)
+	rospy.Subscriber("/agv_status", moobot_status, agv_status_listener)
+	rospy.Subscriber("/bms_status", bms_status, bms_status_listener)
+	read_from_port(nexSer)
+	rospy.spin()
+	
+	
+
+
+

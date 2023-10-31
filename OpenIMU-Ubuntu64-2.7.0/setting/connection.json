@@ -1,0 +1,1 @@
+{"history": [{"port": "/dev/ttyUSB0", "baud": 115200, "device_type": "IMU"}, {"port": "/dev/ttyUSB1", "baud": 115200, "device_type": "IMU"}, {"port": "/dev/ttyUSB2", "baud": 115200, "device_type": "IMU"}], "last": 0}

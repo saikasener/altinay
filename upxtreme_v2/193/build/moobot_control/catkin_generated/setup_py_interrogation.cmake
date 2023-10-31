@@ -1,0 +1,7 @@
+set(moobot_control_SETUP_PY_SETUP_MODULE "distutils.core")
+set(moobot_control_SETUP_PY_VERSION "0.0.0")
+set(moobot_control_SETUP_PY_SCRIPTS "")
+set(moobot_control_SETUP_PY_PACKAGES "moobot_control")
+set(moobot_control_SETUP_PY_PACKAGE_DIRS "src/moobot_control")
+set(moobot_control_SETUP_PY_MODULES "")
+set(moobot_control_SETUP_PY_MODULE_DIRS "")

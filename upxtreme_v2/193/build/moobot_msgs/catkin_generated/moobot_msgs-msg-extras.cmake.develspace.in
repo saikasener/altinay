@@ -1,0 +1,2 @@
+set(moobot_msgs_MESSAGE_FILES "/home/rnd/moobot_ws/src/moobot_msgs/msg/SensorState.msg;/home/rnd/moobot_ws/src/moobot_msgs/msg/moobot_status.msg;/home/rnd/moobot_ws/src/moobot_msgs/msg/moobot_scanner.msg;/home/rnd/moobot_ws/src/moobot_msgs/msg/bms_status.msg;/home/rnd/moobot_ws/src/moobot_msgs/msg/conveyor_status.msg;/home/rnd/moobot_ws/src/moobot_msgs/msg/moobot_sensor_status.msg;/home/rnd/moobot_ws/src/moobot_msgs/msg/ultrasonic_status.msg;/home/rnd/moobot_ws/src/moobot_msgs/msg/lift_status.msg")
+set(moobot_msgs_SERVICE_FILES "")

@@ -1,0 +1,9 @@
+2023-08-31 11:09:28,094 - INFO: try to use last connected port /dev/ttyUSB0 115200
+2023-08-31 11:09:28,097 - INFO: /dev/ttyUSB0 : 115200 open failed
+2023-08-31 11:09:28,102 - INFO: start to connect serial port
+2023-08-31 11:09:28,102 - INFO: try to use connected port /dev/ttyS4 in history
+2023-08-31 11:09:28,113 - INFO: try /dev/ttyS4:460800
+2023-08-31 11:09:33,404 - INFO: try /dev/ttyS4:115200
+2023-08-31 11:09:38,679 - INFO: try /dev/ttyS4:57600
+2023-08-31 11:09:43,958 - INFO: try /dev/ttyS4:230400
+2023-08-31 11:09:49,237 - INFO: try /dev/ttyS4:38400

@@ -1,0 +1,14 @@
+<launch>
+<!-- cwd="node"-->
+  <node pkg="moobot_bms" type="bms_node.py" name="moobot_bms"  output="screen"/>
+</launch>
+
+
+
+
+
+
+
+
+
+

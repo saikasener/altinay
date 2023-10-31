@@ -1,0 +1,75 @@
+<launch>
+  <!-- Set this true for simulation -->
+  <arg name="simulation" default="true"/>
+  <!-- Select the laser scanner
+       Hokuyo: true
+       Sick  : false -->
+  <arg name="scanner_select" default="false"/>
+  <!-- Arguments -->
+  <arg name="map_file" default="$(find moobot_navigation)/maps/gazebo_map_20mm.yaml" if="$(arg simulation)"/>
+  <arg name="map_file" default="$(find moobot_navigation)/maps/moobot_test_platform_v13_20mm.yaml" unless="$(arg simulation)"/>
+  <arg name="open_rviz" default="false"/>
+  <arg name="move_forward_only" default="true"/>
+  <arg name="scan_topic" default="scan_filtered" />
+  <!-- Robot Description -->
+  <arg name="model" default="moobot" />
+  <arg name="urdf_model_path" default="$(find moobot_description)/urdf/$(arg model).urdf.xacro" />
+  <param name="robot_description" command="$(find xacro)/xacro.py $(arg urdf_model_path)" />
+  <!-- Start Gazebo argument "simulation" is set true -->
+  <include file="$(find moobot_gazebo)/launch/moobot_spawn.launch" if="$(arg simulation)">
+    <arg name="x_pos" default="-4.35"/>
+    <arg name="y_pos" default="-2.50"/>
+    <arg name="z_pos" default="0.0"/>
+    <arg name="gui_on" default="false" />
+    <arg name="controller_on" default="false" />
+  </include>
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" respawn="true" output="screen">
+    <param name="publish_frequency" type="double" value="50.0" />
+  </node>
+  <param name="base_frame" value = "base_footprint"/>
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen">
+    <param name="publish_frequency" type="double" value="50.0" />
+  </node>
+  <group unless="$(arg simulation)">
+    <!-- Sick s300 Expert -->
+    <rosparam command="load" file="$(find moobot_navigation)/config/mys300.yaml"/>
+    <node name="laser" pkg="cob_sick_s300" type="cob_sick_s300" respawn="false" output="screen" unless="$(arg scanner_select)">
+    </node>
+    <!-- Hokuyo Node -->
+    <node name="urg_node" pkg="urg_node" type="urg_node" output="screen" if="$(arg scanner_select)">
+      <param name="ip_address" value="192.168.0.10" />
+      <param name="frame_id" value="base_scan" />
+      <param name="publish_intensity" value="false" />
+      <param name="angle_min" value="-1.60876090527" />
+      <param name="angle_max" value="1.60876090527" />
+    </node>
+  
+    
+    <node pkg="laser_scan_matcher" type="laser_scan_matcher_node" name="laser_scan_matcher_node" output="screen"/>
+     <node pkg="laser_filters" type="scan_to_scan_filter_chain" name="limit_scan_angle">
+      <rosparam command="load" file="$(find moobot_navigation)/config/laserscan_filter.yaml" />
+    </node>
+    </group>
+
+
+  <!-- Map server -->
+  <node pkg="map_server" name="map_server" type="map_server" args="$(arg map_file)"/>
+  <!-- AMCL -->
+  <include file="$(find moobot_navigation)/launch/amcl.launch">
+    <arg name="scan_topic" default="scan" if="$(arg simulation)" />
+    <arg name="scan_topic" default="scan_filtered" unless="$(arg simulation)" />
+    
+    <!--<remap from="amcl_pose" to="odom"/>-->
+  </include>
+
+  <!-- move_base -->
+  <include file="$(find moobot_navigation)/launch/move_base.launch">
+    <arg name="model" value="$(arg model)" />
+    <arg name="move_forward_only" value="$(arg move_forward_only)"/>
+    <arg name="scan_topic" default="scan" if="$(arg simulation)" />
+    <arg name="scan_topic" default="scan_filtered" unless="$(arg simulation)" />
+  </include>
+
+</launch>
+
+ 

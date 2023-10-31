@@ -1,0 +1,8 @@
+prefix=/home/rnd/moobot_ws/install
+
+Name: ros_openimu
+Description: Description of ros_openimu
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

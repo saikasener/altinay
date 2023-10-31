@@ -1,0 +1,8 @@
+prefix=/home/rnd/moobot_ws/devel
+
+Name: moobot_pgv
+Description: Description of moobot_pgv
+Version: 0.0.0
+Cflags: -I/home/rnd/moobot_ws/devel/include
+Libs: -L${prefix}/lib 
+Requires: 

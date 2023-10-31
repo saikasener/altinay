@@ -1,0 +1,4 @@
+2023-08-31 11:13:56,346 - INFO: try to use last connected port /dev/ttyUSB0 115200
+2023-08-31 11:13:56,757 - INFO: Connected Device info # Connected OpenIMU #
+Device: OpenIMU300ZI 5020-3885-02 1.1.2 SN:2008400430 
+Firmware: OpenIMU300ZI IMU 1.1.3

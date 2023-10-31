@@ -1,0 +1,8 @@
+prefix=/home/rnd/moobot_ws/devel
+
+Name: moobot_bms
+Description: Description of moobot_bms
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

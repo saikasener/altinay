@@ -1,0 +1,36 @@
+<launch>
+
+  <arg name="map_file" default="$(find moobot_navigation)/maps/localization_test.yaml"/>
+  <arg name="move_forward_only" default="false"/>
+  <arg name="odom_frame_name" default="odom"/>
+  <arg name="odom_topic_name" default="odometry/filtered"/>
+
+  <!-- Robot Model 
+  <arg name="model" default="moobot" />
+-->
+
+  <!-- Map server -->
+  <node pkg="map_server" name="map_server" type="map_server" respawn="false" args="$(arg map_file)" output="screen"/>
+
+<!-- Robot Localization from Tutorial --> 
+
+  <node pkg="robot_localization" type="ekf_localization_node" name="ekf_se" clear_params="true">
+    <rosparam command="load" file="$(find ros_openimu)/params/ekf.yaml" />
+  </node>
+  
+        
+  <!-- AMCL -->
+  <include file="$(find moobot_navigation)/launch/amcl.launch">
+      <arg name="scan_topic" default="scan" />
+      <arg name="amcl_odom_frame" value="$(arg odom_frame_name)"/>
+  </include>
+
+
+
+  <!-- move_base -->
+  <include file="$(find moobot_navigation)/launch/move_base.launch">
+      <arg name="scan_topic" default="scan" />
+      <arg name="odom_topic" value="$(arg odom_topic_name)" />
+  </include>
+
+</launch>

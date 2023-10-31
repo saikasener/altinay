@@ -1,0 +1,31 @@
+2023-08-15 11:33:14,753 - INFO: try to use last connected port /dev/ttyUSB2 115200
+2023-08-15 11:33:14,754 - INFO: /dev/ttyUSB2 : 115200 open failed
+2023-08-15 11:33:14,763 - INFO: start to connect serial port
+2023-08-15 11:33:14,764 - INFO: try to use connected port /dev/ttyS4 in history
+2023-08-15 11:33:14,764 - INFO: try /dev/ttyS4:460800
+2023-08-15 11:33:14,764 - INFO: try to use connected port /dev/ttyUSB5 in history
+2023-08-15 11:33:14,764 - INFO: try to use connected port /dev/ttyUSB4 in history
+2023-08-15 11:33:14,764 - INFO: try to use connected port /dev/ttyUSB3 in history
+2023-08-15 11:33:14,780 - INFO: try /dev/ttyUSB5:460800
+2023-08-15 11:33:14,790 - INFO: try /dev/ttyUSB4:460800
+2023-08-15 11:33:14,811 - INFO: try /dev/ttyUSB3:460800
+2023-08-15 11:33:20,018 - INFO: try /dev/ttyS4:115200
+2023-08-15 11:33:20,113 - INFO: try /dev/ttyUSB5:115200
+2023-08-15 11:33:20,123 - INFO: try /dev/ttyUSB4:115200
+2023-08-15 11:33:20,139 - INFO: try /dev/ttyUSB3:115200
+2023-08-15 11:33:25,298 - INFO: try /dev/ttyS4:57600
+2023-08-15 11:33:25,439 - INFO: try /dev/ttyUSB4:57600
+2023-08-15 11:33:25,460 - INFO: try /dev/ttyUSB5:57600
+2023-08-15 11:33:25,465 - INFO: try /dev/ttyUSB3:57600
+2023-08-15 11:33:30,599 - INFO: try /dev/ttyS4:230400
+2023-08-15 11:33:30,751 - INFO: try /dev/ttyUSB5:230400
+2023-08-15 11:33:30,756 - INFO: try /dev/ttyUSB3:230400
+2023-08-15 11:33:30,788 - INFO: try /dev/ttyUSB4:230400
+2023-08-15 11:33:35,884 - INFO: try /dev/ttyS4:38400
+2023-08-15 11:33:36,036 - INFO: try /dev/ttyUSB3:38400
+2023-08-15 11:33:36,041 - INFO: try /dev/ttyUSB5:38400
+2023-08-15 11:33:36,083 - INFO: try /dev/ttyUSB4:38400
+2023-08-15 11:33:41,166 - INFO: try to use connected port /dev/ttyUSB1 in history
+2023-08-15 11:33:41,723 - INFO: Connected Device info # Connected OpenIMU #
+Device: OpenIMU300ZI 5020-3886-02 04.01.04 SN:2008400430 
+Firmware: OpenIMU300ZI IMU 04.01.04

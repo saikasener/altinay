@@ -1,0 +1,5 @@
+<launch>
+ 
+  <node pkg="moobot_bringup" type="moobot_diagnostics" name="moobot_diagnostics" output="screen"/>
+
+</launch> 																																																																									

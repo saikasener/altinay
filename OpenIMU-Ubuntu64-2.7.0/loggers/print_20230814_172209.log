@@ -1,0 +1,42 @@
+2023-08-14 17:22:09,880 - INFO: start to connect serial port
+2023-08-14 17:22:09,880 - INFO: try to use connected port /dev/ttyS4 in history
+2023-08-14 17:22:09,880 - INFO: try to use connected port /dev/ttyUSB3 in history
+2023-08-14 17:22:09,880 - INFO: try to use connected port /dev/ttyUSB2 in history
+2023-08-14 17:22:09,881 - INFO: try /dev/ttyS4:460800
+2023-08-14 17:22:09,881 - INFO: try to use connected port /dev/ttyUSB1 in history
+2023-08-14 17:22:09,886 - INFO: try /dev/ttyUSB3:460800
+2023-08-14 17:22:09,891 - INFO: try /dev/ttyUSB2:460800
+2023-08-14 17:22:09,912 - INFO: try /dev/ttyUSB1:460800
+2023-08-14 17:22:15,182 - INFO: try /dev/ttyUSB2:115200
+2023-08-14 17:22:15,229 - INFO: try /dev/ttyUSB3:115200
+2023-08-14 17:22:15,229 - INFO: try /dev/ttyS4:115200
+2023-08-14 17:22:15,240 - INFO: try /dev/ttyUSB1:115200
+2023-08-14 17:22:20,486 - INFO: try /dev/ttyUSB2:57600
+2023-08-14 17:22:20,522 - INFO: try /dev/ttyS4:57600
+2023-08-14 17:22:20,557 - INFO: try /dev/ttyUSB3:57600
+2023-08-14 17:22:20,594 - INFO: try /dev/ttyUSB1:57600
+2023-08-14 17:22:25,785 - INFO: try /dev/ttyUSB2:230400
+2023-08-14 17:22:25,816 - INFO: try /dev/ttyS4:230400
+2023-08-14 17:22:25,860 - INFO: try /dev/ttyUSB3:230400
+2023-08-14 17:22:25,886 - INFO: try /dev/ttyUSB1:230400
+2023-08-14 17:22:31,108 - INFO: try /dev/ttyS4:38400
+2023-08-14 17:22:31,118 - INFO: try /dev/ttyUSB2:38400
+2023-08-14 17:22:31,154 - INFO: try /dev/ttyUSB3:38400
+2023-08-14 17:22:31,180 - INFO: try /dev/ttyUSB1:38400
+2023-08-14 17:22:36,405 - INFO: try to use connected port /dev/ttyUSB0 in history
+2023-08-14 17:22:36,415 - INFO: try /dev/ttyUSB0:460800
+2023-08-14 17:22:40,075 - INFO: try /dev/ttyUSB0:115200
+2023-08-14 17:22:40,227 - INFO: Error while confirm device read failed: device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+2023-08-14 17:22:40,368 - INFO: try /dev/ttyUSB0:57600
+2023-08-14 17:22:40,704 - INFO: Error while confirm device read failed: device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+2023-08-14 17:22:40,840 - INFO: try /dev/ttyUSB0:230400
+2023-08-14 17:22:41,330 - INFO: Error while confirm device read failed: device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+2023-08-14 17:22:41,471 - INFO: try /dev/ttyUSB0:38400
+2023-08-14 17:22:42,117 - INFO: Error while confirm device read failed: device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+2023-08-14 17:22:42,753 - INFO: try to use last connected port /dev/ttyUSB0 115200
+2023-08-14 17:22:43,161 - INFO: Connected Device info # Connected OpenIMU #
+Device: OpenIMU300ZI 5020-3886-02 04.01.04 SN:2008400430 
+Firmware: OpenIMU300ZI IMU 04.01.04
+2023-08-14 17:23:00,682 - INFO: crc check error! packet_type:z1
+2023-08-14 17:23:01,328 - INFO: crc check error! packet_type:z1
+2023-08-14 17:23:14,143 - INFO: crc check error! packet_type: i

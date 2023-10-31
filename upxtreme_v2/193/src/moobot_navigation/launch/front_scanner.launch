@@ -1,0 +1,15 @@
+<launch>
+
+  <rosparam command="load" file="/home/rnd/moobot_ws/src/moobot_navigation/config/fs_s300.yaml"/>
+
+  <node name="fs_laser" pkg="cob_sick_s300" type="cob_sick_s300" respawn="false" output="screen">
+    <remap from="scan" to="/fs_scan_nofilter"/>
+  </node>
+
+  <node pkg="laser_filters" type="scan_to_scan_filter_chain" name="limit_scan_angle_front">
+    <rosparam command="load" file="$(find moobot_navigation)/config/laserscan_filter_front.yaml" />
+    <remap from="scan" to="/fs_scan_nofilter"/>
+    <remap from="scan_filtered" to="/front_scan"/>
+  </node>
+
+</launch>

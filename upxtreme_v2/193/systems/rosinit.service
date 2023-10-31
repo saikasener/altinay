@@ -1,0 +1,16 @@
+[Unit]
+Description=Ros Initialization
+After=remote-fs.target
+After=syslog.target
+#StartLimitIntervalSec=1000
+#StartLimitBurst=100
+
+[Service]
+User=rnd
+ExecStart=/bin/bash /usr/local/bin/rosInitService.sh
+Restart=always
+#RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
+

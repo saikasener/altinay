@@ -1,0 +1,16 @@
+2023-08-30 10:36:41,116 - INFO: try to use last connected port /dev/ttyUSB0 115200
+2023-08-30 10:36:41,327 - ERROR: Parse data as string failed
+2023-08-30 10:36:41,538 - ERROR: Parse data as string failed
+2023-08-30 10:36:41,764 - INFO: start to connect serial port
+2023-08-30 10:36:41,764 - INFO: try to use connected port /dev/ttyS4 in history
+2023-08-30 10:36:41,764 - INFO: try /dev/ttyS4:460800
+2023-08-30 10:36:41,765 - INFO: try to use connected port /dev/ttyUSB3 in history
+2023-08-30 10:36:41,765 - INFO: try /dev/ttyUSB3:460800
+2023-08-30 10:36:41,765 - INFO: try to use connected port /dev/ttyUSB2 in history
+2023-08-30 10:36:41,765 - INFO: try to use connected port /dev/ttyUSB1 in history
+2023-08-30 10:36:45,476 - INFO: try /dev/ttyUSB2:460800
+2023-08-30 10:36:45,492 - INFO: try /dev/ttyUSB1:460800
+2023-08-30 10:36:47,050 - INFO: try /dev/ttyS4:115200
+2023-08-30 10:36:47,081 - INFO: try /dev/ttyUSB3:115200
+2023-08-30 10:36:50,750 - INFO: try /dev/ttyUSB2:115200
+2023-08-30 10:36:50,771 - INFO: try /dev/ttyUSB1:115200

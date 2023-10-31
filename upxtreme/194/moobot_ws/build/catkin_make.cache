@@ -1,0 +1,2 @@
+agv_mode_srvs:ds4_driver:moobot_bms:moobot_bringup:moobot_description:moobot_gazebo:moobot_msgs:moobot_navigation:moobot_pgv:moobot_plc:moobot_slam:moobot_ui:ros_openimu
+-DCATKIN_DEVEL_PREFIX=/home/rnd/moobot_ws/devel -DCMAKE_INSTALL_PREFIX=/home/rnd/moobot_ws/install -G Unix Makefiles

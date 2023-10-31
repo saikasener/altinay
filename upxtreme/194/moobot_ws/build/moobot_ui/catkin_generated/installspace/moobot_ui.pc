@@ -1,0 +1,8 @@
+prefix=/home/rnd/moobot_ws/install
+
+Name: moobot_ui
+Description: Description of moobot_ui
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -lmoobot_ui
+Requires: message_runtime roscpp std_msgs

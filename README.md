@@ -72,20 +72,20 @@ Robot Localization EKF package for the map frame
 
 
 --------------------
-Coordinates
+## isuzu_demo Folder
 
-JSON dosyasına yazılan x,y,z,orientatin datasını çekerek navigasyona hedef vermek
+- go_straight.py kodu emergency time dikkate alarak düz gitme komudu yayınlar. 
+- mercedes_2station.py kodu .rviz dosyasında verilen istasyonlar arasında sürekli gidip gelme görevi yayınlar. 
 
-move_base_goal/coordinates.py 
-
-
-
-
-
-
+ 
+--------------------
+## upxtreme_v1 Folder
+Robotun üzerindeki bilgisayarların ilk versiyonu 
 
 
-
+--------------------
+## upxtreme_v2 Folder
+Robotun üzerindeki bilgisayarların ikinci versiyonu 
 
 
 

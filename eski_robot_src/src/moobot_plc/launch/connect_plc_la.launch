@@ -1,0 +1,6 @@
+<launch>
+ 
+  <node name="connect_plc" pkg="moobot_plc" type="moobot_plc" name="connect_plc" 
+output="screen"/>
+
+</launch> 

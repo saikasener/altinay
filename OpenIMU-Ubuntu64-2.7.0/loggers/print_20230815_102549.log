@@ -1,0 +1,97 @@
+2023-08-15 10:25:49,614 - INFO: try to use last connected port /dev/ttyUSB2 115200
+2023-08-15 10:25:49,618 - INFO: /dev/ttyUSB2 : 115200 open failed
+2023-08-15 10:25:49,635 - INFO: start to connect serial port
+2023-08-15 10:25:49,635 - INFO: try to use connected port /dev/ttyS4 in history
+2023-08-15 10:25:49,635 - INFO: try /dev/ttyS4:460800
+2023-08-15 10:25:49,635 - INFO: try to use connected port /dev/ttyUSB5 in history
+2023-08-15 10:25:49,635 - INFO: try to use connected port /dev/ttyUSB4 in history
+2023-08-15 10:25:49,636 - INFO: try to use connected port /dev/ttyUSB3 in history
+2023-08-15 10:25:49,636 - INFO: try /dev/ttyUSB5:460800
+2023-08-15 10:25:49,646 - INFO: try /dev/ttyUSB4:460800
+2023-08-15 10:25:49,651 - INFO: try /dev/ttyUSB3:460800
+2023-08-15 10:25:54,920 - INFO: try /dev/ttyS4:115200
+2023-08-15 10:25:54,945 - INFO: try /dev/ttyUSB4:115200
+2023-08-15 10:25:54,966 - INFO: try /dev/ttyUSB5:115200
+2023-08-15 10:25:54,976 - INFO: try /dev/ttyUSB3:115200
+2023-08-15 10:26:00,191 - INFO: try /dev/ttyS4:57600
+2023-08-15 10:26:00,231 - INFO: try /dev/ttyUSB4:57600
+2023-08-15 10:26:00,272 - INFO: try /dev/ttyUSB5:57600
+2023-08-15 10:26:00,278 - INFO: try /dev/ttyUSB3:57600
+2023-08-15 10:26:05,488 - INFO: try /dev/ttyS4:230400
+2023-08-15 10:26:05,518 - INFO: try /dev/ttyUSB4:230400
+2023-08-15 10:26:05,555 - INFO: try /dev/ttyUSB3:230400
+2023-08-15 10:26:05,576 - INFO: try /dev/ttyUSB5:230400
+2023-08-15 10:26:10,772 - INFO: try /dev/ttyS4:38400
+2023-08-15 10:26:10,809 - INFO: try /dev/ttyUSB4:38400
+2023-08-15 10:26:10,823 - INFO: try /dev/ttyUSB3:38400
+2023-08-15 10:26:10,855 - INFO: try /dev/ttyUSB5:38400
+2023-08-15 10:26:16,067 - INFO: try to use connected port /dev/ttyUSB1 in history
+2023-08-15 10:26:19,813 - INFO: try /dev/ttyUSB1:460800
+2023-08-15 10:26:25,113 - INFO: try /dev/ttyUSB1:115200
+2023-08-15 10:26:30,400 - INFO: try /dev/ttyUSB1:57600
+2023-08-15 10:26:35,689 - INFO: try /dev/ttyUSB1:230400
+2023-08-15 10:26:40,989 - INFO: try /dev/ttyUSB1:38400
+2023-08-15 10:26:46,773 - INFO: try to use last connected port /dev/ttyUSB2 115200
+2023-08-15 10:26:46,778 - INFO: /dev/ttyUSB2 : 115200 open failed
+2023-08-15 10:26:46,807 - INFO: start to connect serial port
+2023-08-15 10:26:46,807 - INFO: try to use connected port /dev/ttyS4 in history
+2023-08-15 10:26:46,807 - INFO: try to use connected port /dev/ttyUSB5 in history
+2023-08-15 10:26:46,807 - INFO: try to use connected port /dev/ttyUSB4 in history
+2023-08-15 10:26:46,807 - INFO: try to use connected port /dev/ttyUSB3 in history
+2023-08-15 10:26:46,818 - INFO: try /dev/ttyS4:460800
+2023-08-15 10:26:46,828 - INFO: try /dev/ttyUSB5:460800
+2023-08-15 10:26:46,833 - INFO: try /dev/ttyUSB4:460800
+2023-08-15 10:26:46,839 - INFO: try /dev/ttyUSB3:460800
+2023-08-15 10:26:52,122 - INFO: try /dev/ttyS4:115200
+2023-08-15 10:26:52,148 - INFO: try /dev/ttyUSB4:115200
+2023-08-15 10:26:52,179 - INFO: try /dev/ttyUSB5:115200
+2023-08-15 10:26:52,184 - INFO: try /dev/ttyUSB3:115200
+2023-08-15 10:26:57,417 - INFO: try /dev/ttyS4:57600
+2023-08-15 10:26:57,423 - INFO: try /dev/ttyUSB4:57600
+2023-08-15 10:26:57,459 - INFO: try /dev/ttyUSB5:57600
+2023-08-15 10:26:57,485 - INFO: try /dev/ttyUSB3:57600
+2023-08-15 10:27:02,691 - INFO: try /dev/ttyUSB4:230400
+2023-08-15 10:27:02,727 - INFO: try /dev/ttyS4:230400
+2023-08-15 10:27:02,753 - INFO: try /dev/ttyUSB5:230400
+2023-08-15 10:27:02,764 - INFO: try /dev/ttyUSB3:230400
+2023-08-15 10:27:07,999 - INFO: try /dev/ttyUSB4:38400
+2023-08-15 10:27:08,025 - INFO: try /dev/ttyS4:38400
+2023-08-15 10:27:08,040 - INFO: try /dev/ttyUSB5:38400
+2023-08-15 10:27:08,056 - INFO: try /dev/ttyUSB3:38400
+2023-08-15 10:27:13,299 - INFO: try to use connected port /dev/ttyUSB1 in history
+2023-08-15 10:27:17,023 - INFO: try /dev/ttyUSB1:460800
+2023-08-15 10:27:22,280 - INFO: try /dev/ttyUSB1:115200
+2023-08-15 10:27:27,567 - INFO: try /dev/ttyUSB1:57600
+2023-08-15 10:27:32,848 - INFO: try /dev/ttyUSB1:230400
+2023-08-15 10:27:38,111 - INFO: try /dev/ttyUSB1:38400
+2023-08-15 10:27:43,885 - INFO: try to use last connected port /dev/ttyUSB2 115200
+2023-08-15 10:27:43,890 - INFO: /dev/ttyUSB2 : 115200 open failed
+2023-08-15 10:27:43,917 - INFO: start to connect serial port
+2023-08-15 10:27:43,918 - INFO: try to use connected port /dev/ttyS4 in history
+2023-08-15 10:27:43,918 - INFO: try to use connected port /dev/ttyUSB5 in history
+2023-08-15 10:27:43,918 - INFO: try to use connected port /dev/ttyUSB4 in history
+2023-08-15 10:27:43,918 - INFO: try /dev/ttyS4:460800
+2023-08-15 10:27:43,918 - INFO: try to use connected port /dev/ttyUSB3 in history
+2023-08-15 10:27:43,923 - INFO: try /dev/ttyUSB5:460800
+2023-08-15 10:27:43,934 - INFO: try /dev/ttyUSB4:460800
+2023-08-15 10:27:43,955 - INFO: try /dev/ttyUSB3:460800
+2023-08-15 10:27:49,200 - INFO: try /dev/ttyS4:115200
+2023-08-15 10:27:49,267 - INFO: try /dev/ttyUSB4:115200
+2023-08-15 10:27:49,288 - INFO: try /dev/ttyUSB3:115200
+2023-08-15 10:27:49,293 - INFO: try /dev/ttyUSB5:115200
+2023-08-15 10:27:54,490 - INFO: try /dev/ttyS4:57600
+2023-08-15 10:27:54,556 - INFO: try /dev/ttyUSB4:57600
+2023-08-15 10:27:54,577 - INFO: try /dev/ttyUSB5:57600
+2023-08-15 10:27:54,628 - INFO: try /dev/ttyUSB3:57600
+2023-08-15 10:27:59,788 - INFO: try /dev/ttyS4:230400
+2023-08-15 10:27:59,846 - INFO: try /dev/ttyUSB4:230400
+2023-08-15 10:27:59,877 - INFO: try /dev/ttyUSB5:230400
+2023-08-15 10:27:59,922 - INFO: try /dev/ttyUSB3:230400
+2023-08-15 10:28:05,068 - INFO: try /dev/ttyS4:38400
+2023-08-15 10:28:05,139 - INFO: try /dev/ttyUSB5:38400
+2023-08-15 10:28:05,160 - INFO: try /dev/ttyUSB4:38400
+2023-08-15 10:28:05,230 - INFO: try /dev/ttyUSB3:38400
+2023-08-15 10:28:10,360 - INFO: try to use connected port /dev/ttyUSB1 in history
+2023-08-15 10:28:14,109 - INFO: try /dev/ttyUSB1:460800
+2023-08-15 10:28:19,406 - INFO: try /dev/ttyUSB1:115200
+2023-08-15 10:28:24,691 - INFO: try /dev/ttyUSB1:57600

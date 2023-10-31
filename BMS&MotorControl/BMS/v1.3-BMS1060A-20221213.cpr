@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ControllerProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0">
+  <Firmware>Roboteq v1.7 BMS 05/12/2021</Firmware>
+  <Roborun>Rev 1.3. 7/1/20</Roborun>
+  <ControlTree Name="v1.3:BMS1060A">
+    <Item Command="BTNC" Index="1" Node="Battery Pack Parameters|Number of Cells">
+      <ArgumentType>IntegerValue</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>14</Value>
+    </Item>
+    <Item Command="CCHT" Index="1" Node="Battery Pack Parameters|Cell Chemistry Type">
+      <ArgumentType>IntegerValue</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>1</Value>
+    </Item>
+    <Item Command="NOMC" Index="1" Node="Battery Pack Parameters|Nominal Capacity (Ah)">
+      <ArgumentType>IntegerValue</ArgumentType>
+      <Multiplier>10</Multiplier>
+      <Value>1020</Value>
+    </Item>
+    <Item Command="CNDU" Index="1" Node="Battery Pack Parameters|Max Charge Cycles">
+      <ArgumentType>IntegerValue</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>9999</Value>
+    </Item>
+    <Item Command="BPRC" Index="1" Node="Battery Pack Parameters|Allowed Imbalance (mV)">
+      <ArgumentType>IntegerValue</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>10</Value>
+    </Item>
+    <Item Command="BAHT" Index="1" Node="Battery Pack Parameters|Max Current on Discharge (A)">
+      <ArgumentType>IntegerValue</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>306</Value>
+    </Item>
+    <Item Command="BALT" Index="1" Node="Battery Pack Parameters|Max Current on Charge (A)">
+      <ArgumentType>IntegerValue</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>50</Value>
+    </Item>
+    <Item Command="CRES" Index="1" Node="Battery Pack Parameters|Cell Internal Resistance (mOhm)">
+      <ArgumentType>IntegerValue</ArgumentType>
+      <Multiplier>1000</Multiplier>
+      <Value>1</Value>
+    </Item>
+    <Item Command="CNOV" Index="0" Node="Battery Pack Parameters|Custom Chemistry Settings|Cell Nominal Voltage (mV)">
+      <ArgumentType>IntegerValue</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>3200</Value>
+    </Item>
+    <Item Command="BCHT" Index="1" Node="Battery Pack Parameters|Custom Chemistry Settings|Cell High Limit (mV)">
+      <ArgumentType>IntegerList</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>3650</Value>
+    </Item>
+    <Item Command="BCLT" Index="1" Node="Battery Pack Parameters|Custom Chemistry Settings|Cell Low Limit (mV)">
+      <ArgumentType>IntegerList</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>2500</Value>
+    </Item>
+    <Item Command="ATRIG" Index="1" Node="BMS Amps Limits|Load Currrent Limit|Overload Current (A)">
+      <ArgumentType>IntegerList</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>110</Value>
+    </Item>
+    <Item Command="ATGD" Index="1" Node="BMS Amps Limits|Load Currrent Limit|Overload Trigger Delay (ms)">
+      <ArgumentType>IntegerList</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>5000</Value>
+    </Item>
+    <Item Command="REDL" Index="1" Node="BMS Amps Limits|Load Currrent Limit|Retry Delay (ms)">
+      <ArgumentType>IntegerList</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>5000</Value>
+    </Item>
+    <Item Command="MXRTR" Index="1" Node="BMS Amps Limits|Load Currrent Limit|Max Retries">
+      <ArgumentType>IntegerList</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>15</Value>
+    </Item>
+    <Item Command="ATRIG" Index="2" Node="BMS Amps Limits|Charge Currrent Limit|Charge Current (A)">
+      <ArgumentType>IntegerList</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>35</Value>
+    </Item>
+    <Item Command="ATGD" Index="2" Node="BMS Amps Limits|Charge Currrent Limit|Charge Trigger Delay (ms)">
+      <ArgumentType>IntegerList</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>2000</Value>
+    </Item>
+    <Item Command="REDL" Index="2" Node="BMS Amps Limits|Charge Currrent Limit|Retry Delay (ms)">
+      <ArgumentType>IntegerList</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>5000</Value>
+    </Item>
+    <Item Command="MXRTR" Index="2" Node="BMS Amps Limits|Charge Currrent Limit|Max Retries">
+      <ArgumentType>IntegerList</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>15</Value>
+    </Item>
+    <Item Command="STYP" Index="2" Node="Temperature Limits|Sensor 1">
+      <ArgumentType>IntegerList</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>1</Value>
+    </Item>
+    <Item Command="STYP" Index="3" Node="Temperature Limits|Sensor 2">
+      <ArgumentType>IntegerList</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>1</Value>
+    </Item>
+    <Item Command="STYP" Index="4" Node="Temperature Limits|Sensor 3">
+      <ArgumentType>IntegerList</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>1</Value>
+    </Item>
+    <Item Command="BTHT" Index="2" Node="Temperature Limits|Discharge Max Temp (C)">
+      <ArgumentType>IntegerList</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>55</Value>
+    </Item>
+    <Item Command="BTLT" Index="2" Node="Temperature Limits|Charge Max Temp (C)">
+      <ArgumentType>IntegerList</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>55</Value>
+    </Item>
+    <Item Command="MINOP" Index="2" Node="Temperature Limits|Min Operating Temp (C)">
+      <ArgumentType>IntegerList</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>-10</Value>
+    </Item>
+    <Item Command="THLD" Index="1" Node="Short Circuit Protection">
+      <ArgumentType>IntegerValue</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>0</Value>
+    </Item>
+    <Item Command="SWMAN" Index="1" Node="Switch Control Mode|Circuit Breaker|Pack">
+      <ArgumentType>IntegerList</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>0</Value>
+    </Item>
+    <Item Command="SWMAN" Index="2" Node="Switch Control Mode|Circuit Breaker|Load">
+      <ArgumentType>IntegerList</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>1</Value>
+    </Item>
+    <Item Command="SWMAN" Index="3" Node="Switch Control Mode|Circuit Breaker|Charge">
+      <ArgumentType>IntegerList</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>0</Value>
+    </Item>
+    <Item Command="SWMAN" Index="4" Node="Switch Control Mode|Circuit Breaker|AUX/Brake">
+      <ArgumentType>IntegerList</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>0</Value>
+    </Item>
+    <Item Command="SWMAN" Index="8" Node="Switch Control Mode|Balancing">
+      <ArgumentType>IntegerList</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>0</Value>
+    </Item>
+    <Item Command="ISRG" Index="1" Node="Brake Output">
+      <ArgumentType>IntegerValue</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>1</Value>
+    </Item>
+    <Item Command="DINA" Index="1" Node="Digital Inputs|DIn1|Action">
+      <ArgumentType>IntegerList</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>2</Value>
+    </Item>
+    <Item Command="DINL" Index="2" Node="Digital Inputs|DIn2|Active Level">
+      <ArgumentType>IntegerList</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>0</Value>
+    </Item>
+    <Item Command="DINA" Index="2" Node="Digital Inputs|DIn2|Action">
+      <ArgumentType>IntegerList</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>4</Value>
+    </Item>
+    <Item Command="DOL" Index="1" Node="Digital Outputs|DOut1|Active Level">
+      <ArgumentType>IntegerList</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>0</Value>
+    </Item>
+    <Item Command="DOA" Index="1" Node="Digital Outputs|DOut1|Activate when">
+      <ArgumentType>IntegerList</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>0</Value>
+    </Item>
+    <Item Command="DOL" Index="2" Node="Digital Outputs|DOut2|Active Level">
+      <ArgumentType>IntegerList</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>0</Value>
+    </Item>
+    <Item Command="DOA" Index="2" Node="Digital Outputs|DOut2|Activate when">
+      <ArgumentType>IntegerList</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>0</Value>
+    </Item>
+    <Item Command="PWMM" Index="1" Node="Pulse Output">
+      <ArgumentType>IntegerList</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>0</Value>
+    </Item>
+    <Item Command="CEN" Index="1" Node="CAN|CAN Mode">
+      <ArgumentType>IntegerValue</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>0</Value>
+    </Item>
+    <Item Command="CBR" Index="1" Node="CAN|Bit Rate">
+      <ArgumentType>IntegerValue</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>3</Value>
+    </Item>
+    <Item Command="CNOD" Index="1" Node="CAN|Node ID">
+      <ArgumentType>IntegerValue</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>6</Value>
+    </Item>
+    <Item Command="CLSN" Index="1" Node="CAN|Listen Node ID">
+      <ArgumentType>IntegerValue</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>4</Value>
+    </Item>
+    <Item Command="CHB" Index="1" Node="CAN|Heartbeat (ms)">
+      <ArgumentType>IntegerValue</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>0</Value>
+    </Item>
+    <Item Command="CSRT" Index="1" Node="CAN|MiniCAN Send Rate (ms)">
+      <ArgumentType>IntegerValue</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>100</Value>
+    </Item>
+    <Item Command="CTPS" Index="1" Node="CAN|CANOpen TPDO Send Rate|TPDO 1 Send Rate (ms)">
+      <ArgumentType>IntegerValue</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>0</Value>
+    </Item>
+    <Item Command="CTPS" Index="2" Node="CAN|CANOpen TPDO Send Rate|TPDO 2 Send Rate (ms)">
+      <ArgumentType>IntegerList</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>0</Value>
+    </Item>
+    <Item Command="CTPS" Index="3" Node="CAN|CANOpen TPDO Send Rate|TPDO 3 Send Rate (ms)">
+      <ArgumentType>IntegerList</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>0</Value>
+    </Item>
+    <Item Command="CTPS" Index="4" Node="CAN|CANOpen TPDO Send Rate|TPDO 4 Send Rate (ms)">
+      <ArgumentType>IntegerList</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>0</Value>
+    </Item>
+    <Item Command="CTT" Index="1" Node="CAN|CANOpen Transmission Type|TPDO 1 Transmission Type">
+      <ArgumentType>IntegerList</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>255</Value>
+    </Item>
+    <Item Command="CTT" Index="2" Node="CAN|CANOpen Transmission Type|TPDO 2 Transmission Type">
+      <ArgumentType>IntegerList</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>255</Value>
+    </Item>
+    <Item Command="CTT" Index="3" Node="CAN|CANOpen Transmission Type|TPDO 3 Transmission Type">
+      <ArgumentType>IntegerList</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>255</Value>
+    </Item>
+    <Item Command="CTT" Index="4" Node="CAN|CANOpen Transmission Type|TPDO 4 Transmission Type">
+      <ArgumentType>IntegerList</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>255</Value>
+    </Item>
+    <Item Command="CAS" Index="1" Node="CAN|CANOpen Autostart">
+      <ArgumentType>IntegerValue</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>0</Value>
+    </Item>
+    <Item Command="RS485" Index="1" Node="RS485 (beta)|RS485 Communication">
+      <ArgumentType>IntegerValue</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>0</Value>
+    </Item>
+    <Item Command="RSBR" Index="1" Node="RS485 (beta)|RS485 BaudRate">
+      <ArgumentType>IntegerValue</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>0</Value>
+    </Item>
+    <Item Command="DMOD" Index="1" Node="ModBus (beta)|ModBus Mode">
+      <ArgumentType>IntegerValue</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>0</Value>
+    </Item>
+    <Item Command="MNOD" Index="1" Node="ModBus (beta)|ModBus Slave ID">
+      <ArgumentType>IntegerValue</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>1</Value>
+    </Item>
+    <Item Command="MDAL" Index="1" Node="ModBus (beta)|Data Alignment">
+      <ArgumentType>IntegerValue</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>0</Value>
+    </Item>
+    <Item Command="BRUN" Index="1" Node="Scripting|Script Auto-Start">
+      <ArgumentType>IntegerList</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>0</Value>
+    </Item>
+    <Item Command="SCRO" Index="1" Node="Scripting|Script Output Port">
+      <ArgumentType>IntegerList</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>2</Value>
+    </Item>
+    <Item Command="VIND" Index="1" Node="LED Indications">
+      <ArgumentType>IntegerValue</ArgumentType>
+      <Multiplier>1</Multiplier>
+      <Value>1</Value>
+    </Item>
+  </ControlTree>
+</ControllerProfile>

@@ -1,0 +1,7 @@
+image: /home/rnd/moobot_ws/src/moobot_navigation/maps/test_map_saved.pgm
+resolution: 0.020000
+origin: [-35.009998, -35.009998, 0.000000]
+negate: 0
+occupied_thresh: 0.65
+free_thresh: 0.196
+

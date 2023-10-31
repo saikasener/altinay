@@ -1,0 +1,17 @@
+# Goal
+string request_id
+---
+# Result
+uint16 NONE=0
+uint16 UNKNOWN=100
+uint16 INVALID_TASK=101
+uint16 FAILED_TO_MAKE_PROGRESS=102
+bool success
+string response_id
+---
+# Feedback
+bool success
+
+
+
+

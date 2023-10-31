@@ -1,0 +1,3 @@
+https://software.acontis.com/Documents/AT1020_V1.1_EC-Master-Technical.pdf
+https://software.acontis.com/Documents/AT2410_V3.1_EC-Master-Data-Sheet.pdf
+https://developer.acontis.com/ethercat-manuals.html

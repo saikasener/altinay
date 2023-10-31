@@ -1,0 +1,17 @@
+[Unit]
+Description=Ros Initialization
+#After=remote-fs.target NetworkManager.service time-sync.target
+After = remote-fs.target NetworkManager.service rosinit.service
+After=syslog.target
+StartLimitIntervalSec=120
+StartLimitBurst=10
+
+[Service]
+User=root
+Type=forking
+ExecStart=/bin/bash /usr/local/bin/rosBringupService.sh start
+Restart=on-failure
+#RestartSec=10s
+
+[Install]
+WantedBy=multi-user.target

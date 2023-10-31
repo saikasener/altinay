@@ -1,0 +1,29 @@
+Motor Power Cable
+A -> Sarı 
+B -> Kırmızı
+C- > Siyah
+
+Motor Hall Cable
+H1 -> Mavi
+H2 -> Pembe
+H3 -> Mor
+
+Motor Encoder Cable
+A- -> Yeşil
+A+ -> Kahve
+B- -> Gri
+B+ -> Beyaz
+I- -> Sarı
+I+ -> Turuncu
+GND -> Siyah
+5v -> Kırmızı
+
+Sürücü ABI Differential
+2 -> 5v (Kırmızı)
+3 -> GND (Siyah)
+5 -> A- (Yeşil)
+6 -> A+ (Kahve)
+7 -> B- (Gri)
+8 -> B+ (Beyaz)
+9 -> I- (Sarı)
+10 -> I+ (Turuncu)

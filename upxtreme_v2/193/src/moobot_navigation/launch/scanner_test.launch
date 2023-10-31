@@ -1,0 +1,15 @@
+<launch>
+
+    <rosparam command="load" file="/home/rnd/moobot_ws/src/moobot_navigation/config/bs_s300.yaml"/>	
+
+    <!-- start laser driver -->
+    <node name="laser" pkg="cob_sick_s300" type="cob_sick_s300" respawn="false" output="screen">
+    <remap from="scan" to="/bs_scan_nofilter"/>
+    </node>
+
+    <node pkg="laser_filters" type="scan_to_scan_filter_chain" name="limit_scan_angle_rear">
+      <rosparam command="load" file="$(find moobot_navigation)/config/laserscan_filter_rear.yaml" />
+      <remap from="scan" to="/bs_scan_nofilter"/>
+      <remap from="scan_filtered" to="/rear_scan"/>
+    </node>
+</launch>
